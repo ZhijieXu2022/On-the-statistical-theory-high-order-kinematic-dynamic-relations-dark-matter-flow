@@ -56,7 +56,7 @@ The simulation is the Virgo Consortium SCDM run (Jenkins et al. 1998; Frenk et a
 
 ## Citation
 
-Please cite the article (doi:10.1063/5.0215026) and the data archive (doi:10.5281/zenodo.23910393). GitHub's "Cite this repository" button uses `CITATION.cff`.
+Please cite the article (doi:[10.1063/5.0215026](https://doi.org/10.1063/5.0215026)) and the data archive (doi:[10.5281/zenodo.23910393](https://doi.org/10.5281/zenodo.23910393)). GitHub's "Cite this repository" button uses `CITATION.cff`.
 
 ## Licence
 
