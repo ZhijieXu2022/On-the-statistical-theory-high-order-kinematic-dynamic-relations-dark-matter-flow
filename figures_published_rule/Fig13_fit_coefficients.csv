@@ -1,0 +1,77 @@
+# Publisher,Zhijie Xu,zhijie.xu@pnnl.gov,zhijiexu@hotmail.com,
+# Updated,10/2026,,,
+#Name,"Plotted data of Fig. 13: fitted coefficients a_m, b_m and alpha_nu vs scale factor",,,
+#Ref. [1] Fig. 13,https://doi.org/10.1063/5.0215026,Xu 2024 Phys. Fluids 36 075146 (P19); arXiv:2202.02991,,
+#Note,Series longer than 3000 points thinned to 3000 points uniform in log x (values unchanged); full resolution in results/csv/statistics.,,,
+#Note,"Built with the author's original post-processing (published figure), not the corrected one.",,,
+,,,,
+,,,,
+series,label,x,y,source
+0,b_3,0.0909090909,1.41172587,fits.json
+0,b_3,0.166666667,1.78179748,fits.json
+0,b_3,0.25,2.13268215,fits.json
+0,b_3,0.333333333,2.4109273,fits.json
+0,b_3,0.4,2.62349169,fits.json
+0,b_3,0.5,2.83523875,fits.json
+0,b_3,0.666666667,3.05835798,fits.json
+0,b_3,0.769230769,3.20705884,fits.json
+0,b_3,0.909090909,3.28765263,fits.json
+0,b_3,1,3.31701671,fits.json
+1,a_3(u/u_0)^3,0.0909090909,0.00550736521,fits.json
+1,a_3(u/u_0)^3,0.166666667,0.0157114557,fits.json
+1,a_3(u/u_0)^3,0.25,0.0333610815,fits.json
+1,a_3(u/u_0)^3,0.333333333,0.0599220512,fits.json
+1,a_3(u/u_0)^3,0.4,0.0879035584,fits.json
+1,a_3(u/u_0)^3,0.5,0.143898334,fits.json
+1,a_3(u/u_0)^3,0.666666667,0.273822757,fits.json
+1,a_3(u/u_0)^3,0.769230769,0.365841942,fits.json
+1,a_3(u/u_0)^3,0.909090909,0.533017878,fits.json
+1,a_3(u/u_0)^3,1,0.668415722,fits.json
+2,b_4,0.0909090909,3.1045566,fits.json
+2,b_4,0.166666667,3.11608155,fits.json
+2,b_4,0.25,3.13018186,fits.json
+2,b_4,0.333333333,3.14735401,fits.json
+2,b_4,0.4,3.16003499,fits.json
+2,b_4,0.5,3.17758453,fits.json
+2,b_4,0.666666667,3.21841793,fits.json
+2,b_4,0.769230769,3.25036272,fits.json
+2,b_4,0.909090909,3.32501141,fits.json
+2,b_4,1,3.35867348,fits.json
+3,a_4(u/u_0)^4,0.0909090909,0.0121608554,fits.json
+3,a_4(u/u_0)^4,0.166666667,0.0415254964,fits.json
+3,a_4(u/u_0)^4,0.25,0.0958392651,fits.json
+3,a_4(u/u_0)^4,0.333333333,0.177136336,fits.json
+3,a_4(u/u_0)^4,0.4,0.266649788,fits.json
+3,a_4(u/u_0)^4,0.5,0.437076535,fits.json
+3,a_4(u/u_0)^4,0.666666667,0.806935353,fits.json
+3,a_4(u/u_0)^4,0.769230769,1.07208869,fits.json
+3,a_4(u/u_0)^4,0.909090909,1.4590425,fits.json
+3,a_4(u/u_0)^4,1,1.74302463,fits.json
+4,b_5,0.333333333,2.39911145,fits.json
+4,b_5,0.5,3.04104333,fits.json
+4,b_5,0.769230769,3.42503351,fits.json
+4,b_5,1,3.32951675,fits.json
+5,a_5(u/u_0)^5,0.333333333,0.160504392,fits.json
+5,a_5(u/u_0)^5,0.5,0.704871786,fits.json
+5,a_5(u/u_0)^5,0.769230769,3.35874297,fits.json
+5,a_5(u/u_0)^5,1,9.76780128,fits.json
+6,a_0(u/u_0)^2,0.0909090909,0.0447854187,fits.json
+6,a_0(u/u_0)^2,0.166666667,0.0821461514,fits.json
+6,a_0(u/u_0)^2,0.25,0.121808206,fits.json
+6,a_0(u/u_0)^2,0.333333333,0.160437045,fits.json
+6,a_0(u/u_0)^2,0.4,0.191724981,fits.json
+6,a_0(u/u_0)^2,0.5,0.237634716,fits.json
+6,a_0(u/u_0)^2,0.666666667,0.311909024,fits.json
+6,a_0(u/u_0)^2,0.769230769,0.355870957,fits.json
+6,a_0(u/u_0)^2,0.909090909,0.414035947,fits.json
+6,a_0(u/u_0)^2,1,0.450683626,fits.json
+7,alpha_nu,0.0909090909,0.67634756,fits.json
+7,alpha_nu,0.166666667,0.573786674,fits.json
+7,alpha_nu,0.25,0.547764106,fits.json
+7,alpha_nu,0.333333333,0.56023892,fits.json
+7,alpha_nu,0.4,0.573109709,fits.json
+7,alpha_nu,0.5,0.605544241,fits.json
+7,alpha_nu,0.666666667,0.658419771,fits.json
+7,alpha_nu,0.769230769,0.668212052,fits.json
+7,alpha_nu,0.909090909,0.708054059,fits.json
+7,alpha_nu,1,0.741557585,fits.json

@@ -1,0 +1,235 @@
+# Publisher,Zhijie Xu,zhijie.xu@pnnl.gov,zhijiexu@hotmail.com,,,,,,
+# Updated,10/2026,,,,,,,,
+#Name,Every series of the published figures (.fig arrays) vs the rebuilt series,,,,,,,,
+#Ref. [1],https://doi.org/10.1063/5.0215026,Xu 2024 Phys. Fluids 36 075146 (P19); arXiv:2202.02991,,,,,,,
+,,,,,,,,,
+,,,,,,,,,
+figure,fig_file,pub_series,pub_label,variant,built_label,paired_by,median_rel_diff,max_dev_over_max,n_points
+2,Fig19,0,P_\delta(k) from N-body simulation,published_rule,N-body,position,4.764e-16,4.204e-16,10000
+2,Fig19,1,P_\delta(k) from nonlinear theory,published_rule,nonlinear theory,position,7.432e-09,1.078e-03,62608
+2,Fig19,2,P_\delta(k) from linear theory,published_rule,linear theory,position,3.857e-11,7.357e-12,76001
+4,Fig3,0,"|R_{(3,1)}|",published_rule,"|R_(3,1)|",label,0.000e+00,0.000e+00,119751
+4,Fig3,1,"|L_{(3,2)}|",published_rule,"|L_(3,2)|",label,0.000e+00,0.000e+00,119751
+4,Fig3,2,"|L_{(3,0)}|",published_rule,"|L_(3,0)|",label,0.000e+00,0.000e+00,119751
+4,Fig3,3,"|T_{(3,0)}|",published_rule,"|T_(3,0)|",label,0.000e+00,0.000e+00,119751
+4,Fig3,4,|<u_L^{'3}-u_L^3>|,published_rule,|<u_L'^3 - u_L^3>|,position,0.000e+00,0.000e+00,119751
+4,Fig3,5,|<(u_L^'-u_L)^3>|,published_rule,|<(Delta u_L)^3>|,position,2.479e-03,1.519e-03,119751
+5,Fig4,0,"L_{(4,0)}",published_rule,"L_(4,0)",label,0.000e+00,0.000e+00,119751
+5,Fig4,1,"R_{(4,1)}",published_rule,"R_(4,1)",label,0.000e+00,0.000e+00,119751
+5,Fig4,2,"L_{(4,2)}",published_rule,"L_(4,2)",label,0.000e+00,0.000e+00,119751
+5,Fig4,3,"R_{(4,3)}",published_rule,"R_(4,3)",label,0.000e+00,0.000e+00,119751
+5,Fig4,4,<u_L^{'4}>,published_rule,<u_L'^4>,position,0.000e+00,0.000e+00,119751
+5,Fig4,5,<(u_L^'-u_L)^4>,published_rule,<(Delta u_L)^4>,position,0.000e+00,0.000e+00,119751
+5,Fig4,6,"T_{(4,0)}",published_rule,"T_(4,0)",label,0.000e+00,0.000e+00,119751
+5,Fig4,7,"T_{(4,2)}",published_rule,"T_(4,2)",label,0.000e+00,0.000e+00,119751
+6,Fig5,0,"|L_{(1,0)}|=|<u_L^'>|",published_rule,"|L_(1,0)| = |<u_L'>|",position,0.000e+00,0.000e+00,119751
+6,Fig5,1,"|L_{(3,2)}|=|<u^2u_L^'>|",published_rule,"|L_(3,2)| = |<u^2 u_L'>|",position,0.000e+00,0.000e+00,119751
+6,Fig5,2,"|L_{(5,4)}|=|<u^4u_L^'>|",published_rule,"|L_(5,4)| = |<u^4 u_L'>|",position,0.000e+00,0.000e+00,119751
+6,Fig5,3,Model,published_rule,"Eq. 70, p = 1",position,9.132e-06,9.132e-06,2000
+6,Fig5,4,Model,published_rule,"Eq. 70, p = 3",position,9.132e-06,9.132e-06,2000
+6,Fig5,5,Model,published_rule,"Eq. 70, p = 5",position,9.132e-06,9.132e-06,2000
+7,Fig6,0,"H^S_{(4,0)}",published_rule,"H^S_(4,0)",label,3.547e-16,1.185e-16,2000
+7,Fig6,1,"H^S_{(4,2)}",published_rule,"H^S_(4,2)",label,0.000e+00,8.066e-17,2000
+7,Fig6,2,"H^L_{(4,0)}",published_rule,"H^L_(4,0)",label,0.000e+00,5.518e-16,116752
+7,Fig6,3,"H^L_{(4,2)}",published_rule,"H^L_(4,2)",label,0.000e+00,3.924e-16,116752
+8,Fig7,0,"H^s_{(5,0)}",published_rule,"H^S_(5,0)",label,3.615e-01,2.254e+00,2000
+8,Fig7,1,"H^s_{(5,2)}",published_rule,"H^S_(5,2)",label,0.000e+00,3.398e-16,2000
+8,Fig7,2,"H^L_{(5,0)}",published_rule,"H^L_(5,0)",label,7.534e-01,2.075e+01,116752
+8,Fig7,3,"H^L_{(5,2)}",published_rule,"H^L_(5,2)",label,0.000e+00,1.821e-16,116752
+9,Fig8,0,z=0.0,published_rule,z = 0,label,0.000e+00,0.000e+00,119751
+9,Fig8,1,z=0.3,published_rule,z = 0.3,label,0.000e+00,0.000e+00,119751
+9,Fig8,2,z=1.0,published_rule,z = 1,label,0.000e+00,0.000e+00,119752
+9,Fig8,3,z=2.0,published_rule,z = 2,label,0.000e+00,0.000e+00,119752
+9,Fig8,4,z=5.0,published_rule,z = 5,label,0.000e+00,0.000e+00,119750
+9,Fig8,5,z=0.0,published_rule,"model z = 0 (a_3 = 0.6684, b_3 = 3.3170)",position,2.239e-04,4.695e-05,119751
+9,Fig8,6,z=1.0,published_rule,"model z = 1 (a_3 = 0.5186, b_3 = 2.8352)",position,6.081e-04,2.657e-04,119751
+9,Fig8,7,z=2.0,published_rule,"model z = 2 (a_3 = 0.4807, b_3 = 2.4109)",position,1.189e-04,1.153e-04,119751
+10,Fig9,0,z=0.0,published_rule,z = 0,label,0.000e+00,0.000e+00,119751
+10,Fig9,1,z=0.3,published_rule,z = 0.3,label,0.000e+00,0.000e+00,119751
+10,Fig9,2,z=1.0,published_rule,z = 1,label,0.000e+00,0.000e+00,119752
+10,Fig9,3,z=2.0,published_rule,z = 2,label,0.000e+00,0.000e+00,119752
+10,Fig9,4,z=5.0,published_rule,z = 5,label,0.000e+00,0.000e+00,119750
+10,Fig9,5,data1,published_rule,"model z = 0 (a_4 = 1.7430, b_4 = 3.3587, r2 = 21.3 as published)",position,2.332e-04,8.308e-05,119752
+11,Fig10,0,z=0.0,published_rule,z = 0,label,0.000e+00,0.000e+00,119752
+11,Fig10,1,z=0.3,published_rule,z = 0.3,label,0.000e+00,0.000e+00,119752
+11,Fig10,2,z=1.0,published_rule,z = 1,label,0.000e+00,0.000e+00,119752
+11,Fig10,3,z=2.0,published_rule,z = 2,label,0.000e+00,0.000e+00,119752
+11,Fig10,4,z=0.0,published_rule,"model z = 0 (a_5 = 9.7678, b_5 = 3.3295)",position,5.422e-05,6.309e-05,119752
+11,Fig10,5,z=2.0,published_rule,"model z = 2 (a_5 = 5.1591, b_5 = 2.3991)",position,2.257e-04,6.880e-05,119752
+12,Fig11,0,"R_{(2,1)}(r)",published_rule,"R_(2,1)",label,0.000e+00,0.000e+00,119751
+12,Fig11,1,"R_{(4,3)}(r)",published_rule,"R_(4,3)",label,0.000e+00,0.000e+00,119751
+12,Fig11,2,"R_{(6,5)}(r)",published_rule,"R_(6,5) (published: z = 2 data)",position,0.000e+00,0.000e+00,119751
+12,Fig11,3,"R_{(4,3)}",published_rule,"model R_(4,3) (Eq. 104)",position,1.189e-04,8.307e-05,119751
+13,Fig12,0,b_3,published_rule,b_3,label,1.714e-04,2.837e-04,10
+13,Fig12,1,b_5,published_rule,b_5,label,9.579e-05,2.821e-04,4
+13,Fig12,2,a_0(u/u_0)^2,published_rule,a_0(u/u_0)^2,label,6.150e-05,1.856e-04,10
+13,Fig12,3,a_3(u/u_0)^3,published_rule,a_3(u/u_0)^3,label,1.091e-04,2.070e-04,10
+13,Fig12,4,a_5(u/u_0)^5,published_rule,a_5(u/u_0)^5,label,7.978e-05,8.204e-05,4
+13,Fig12,5,a_4(u/u_0)^4,published_rule,a_4(u/u_0)^4,label,3.937e-05,1.374e-04,10
+13,Fig12,6,b_4,published_rule,b_4,label,1.368e-04,2.436e-04,10
+13,Fig12,7,\alpha_\nu,published_rule,alpha_nu,label,1.031e-04,3.854e-04,10
+15,Fig20,0,<u^2>,published_rule,<u^2>,label,7.434e-16,4.085e-15,119751
+15,Fig20,1,<u_L^2>,published_rule,<u_L^2>,label,0.000e+00,0.000e+00,119751
+15,Fig20,2,<u^2>/<u_L^2>,published_rule,<u^2>/<u_L^2>,label,7.531e-16,7.225e-15,119751
+15,Fig20,3,<u_T^2>/2,published_rule,<u_T^2>/2,label,1.283e-15,6.475e-15,119751
+16,Fig14,0,\sigma_u^2 (z=0),published_rule,sigma_u^2 (z = 0),label,0.000e+00,8.866e-18,119751
+16,Fig14,1,\sigma_u^2 (z=0.3),published_rule,sigma_u^2 (z = 0.3),label,0.000e+00,7.266e-18,119751
+16,Fig14,2,\sigma_u^2 (z=1.0),published_rule,sigma_u^2 (z = 1),label,0.000e+00,1.762e-17,119752
+16,Fig14,3,\sigma_u^2 (z=2.0),published_rule,sigma_u^2 (z = 2),label,0.000e+00,1.270e-16,119752
+16,Fig14,4,\sigma_u^2 (z=5.0),published_rule,sigma_u^2 (z = 5),label,0.000e+00,4.685e-16,119750
+16,Fig14,5,"(R_{(2,1)}+T_{(2,0)})/4 at z=0",published_rule,"(R_(2,1)+T_(2,0))/4, z = 0",label,0.000e+00,0.000e+00,119751
+16,Fig14,6,"(R_{(2,1)}+T_{(2,0)})/4 at z=0.3",published_rule,"(R_(2,1)+T_(2,0))/4, z = 0.3",label,0.000e+00,0.000e+00,119751
+16,Fig14,7,"(R_{(2,1)}+T_{(2,0)})/4 at z=1.0",published_rule,"(R_(2,1)+T_(2,0))/4, z = 1",label,0.000e+00,0.000e+00,119752
+16,Fig14,8,"(R_{(2,1)}+T_{(2,0)})/4 at z=2.0",published_rule,"(R_(2,1)+T_(2,0))/4, z = 2",label,0.000e+00,0.000e+00,119752
+16,Fig14,9,"(R_{(2,1)}+T_{(2,0)})/4 at z=5.0",published_rule,"(R_(2,1)+T_(2,0))/4, z = 5",label,0.000e+00,0.000e+00,119750
+17,ratio_sigma_u2_L32,0,z=0,published_rule,z = 0,label,5.351e-16,1.420e-15,59875
+17,ratio_sigma_u2_L32,1,z=0.5,published_rule,z = 0.5,label,2.909e-16,1.075e-15,59876
+17,ratio_sigma_u2_L32,2,z=1.0,published_rule,z = 1,label,2.071e-16,9.520e-16,59876
+17,ratio_sigma_u2_L32,3,z=2.0,published_rule,z = 2,label,3.075e-16,9.595e-16,59876
+17,ratio_sigma_u2_L32,4,z=3.0,published_rule,z = 3,label,2.217e-16,5.976e-16,59875
+17,ratio_sigma_u2_L32,5,z=5.0,published_rule,z = 5,label,3.271e-16,3.929e-16,59874
+18,Small_scale_sigma_u2_R2_T2_L2_2,0,$\sigma_u^2(r)$ at z=0,published_rule,"sigma_u^2(r), z = 0",label,6.211e-16,3.103e-17,119751
+18,Small_scale_sigma_u2_R2_T2_L2_2,1,$\sigma_u^2(r)$ at z=0.5,published_rule,"sigma_u^2(r), z = 0.5",label,2.293e-16,3.536e-17,119752
+18,Small_scale_sigma_u2_R2_T2_L2_2,2,$\sigma_u^2(r)$ at z=1,published_rule,"sigma_u^2(r), z = 1",label,2.236e-16,2.643e-17,119752
+18,Small_scale_sigma_u2_R2_T2_L2_2,3,$\sigma_u^2(r)$ at z=2,published_rule,"sigma_u^2(r), z = 2",label,3.347e-16,3.175e-16,119752
+18,Small_scale_sigma_u2_R2_T2_L2_2,4,$\bar\sigma_u^2(r)$ at z=0,published_rule,"bar sigma_u^2(r), z = 0",label,0.000e+00,2.545e-16,119751
+18,Small_scale_sigma_u2_R2_T2_L2_2,5,$\bar\sigma_u^2(r)$ at z=0.5,published_rule,"bar sigma_u^2(r), z = 0.5",label,0.000e+00,2.430e-16,119752
+18,Small_scale_sigma_u2_R2_T2_L2_2,6,$\bar\sigma_u^2(r)$ at z=1,published_rule,"bar sigma_u^2(r), z = 1",label,0.000e+00,2.108e-16,119752
+18,Small_scale_sigma_u2_R2_T2_L2_2,7,$\bar\sigma_u^2(r)$ at z=2,published_rule,"bar sigma_u^2(r), z = 2",label,0.000e+00,2.247e-16,119752
+19,Fig16,0,\Deltan=1024; \Deltax=0.234Mpc/h;,published_rule,Delta n = 1024; Delta x = 0.234 Mpc/h,position,1.181e-05,2.264e-02,200
+19,Fig16,1,\Deltan=512; \Deltax=0.468Mpc/h,published_rule,Delta n = 512; Delta x = 0.468 Mpc/h,label,1.196e-05,5.071e-03,200
+19,Fig16,2,\Deltan=256; \Deltax=0.936Mpc/h,published_rule,Delta n = 256; Delta x = 0.936 Mpc/h,label,1.286e-05,6.465e-03,200
+19,Fig16,3,\Deltan=128; \Deltax=1.871Mpc/h,published_rule,Delta n = 128; Delta x = 1.871 Mpc/h,label,1.436e-05,1.470e-04,200
+19,Fig16,4,\Deltan=64; \Deltax=3.742Mpc/h,published_rule,Delta n = 64; Delta x = 3.742 Mpc/h,label,1.569e-05,3.159e-05,200
+19,Fig16,5,y=x,published_rule,y = x,label,0.000e+00,0.000e+00,999999
+19,Fig16,6,y=x/2,published_rule,y = x/2,label,0.000e+00,0.000e+00,999999
+20,Fig17,0,Term 1,published_rule,Term 1,label,1.114e-16,1.702e-16,119751
+20,Fig17,1,Term 2,published_rule,Term 2,label,0.000e+00,3.506e-16,119751
+20,Fig17,2,Term1 +Term2,published_rule,Term 1 + Term 2,label,0.000e+00,3.499e-16,119751
+20,Fig17,3,<u^2>/u^2,published_rule,<u^2>/u^2,label,7.434e-16,4.085e-15,119751
+20,Fig17,4,\beta^* from Eq. (253),published_rule,beta*,position,8.153e-16,3.339e-15,119751
+21,Fig18,0,"|R_{(3,1)}+0.5L_{(3,2)}|",published_rule,"|R_(3,1) + L_(3,2)/2|",position,0.000e+00,0.000e+00,119751
+21,Fig18,1,|<\Deltau_L>|,published_rule,|<Delta u_L>|,label,0.000e+00,0.000e+00,119751
+21,Fig18,2,Har/u,published_rule,H a r/u,label,0.000e+00,1.968e-16,991
+21,Fig18,3,|<(\Deltau_L)^3>|/6,published_rule,|<(Delta u_L)^3>|/6,label,0.000e+00,0.000e+00,119751
+22,small_scale_vel_correlation_vs_a_3,0,"L_{(1,0)}(r=0.05Mpc/h)",published_rule,"L_(1,0)(r = 0.05 Mpc/h)",label,1.177e-05,2.524e-05,4
+22,small_scale_vel_correlation_vs_a_3,1,"L_{(2,0)}(r=0.05Mpc/h)",published_rule,"L_(2,0)(r = 0.05 Mpc/h)",label,1.916e-05,2.223e-05,9
+22,small_scale_vel_correlation_vs_a_3,2,"L_{(3,2)}(r=0.05Mpc/h)",published_rule,"L_(3,2)(r = 0.05 Mpc/h)",label,2.873e-05,4.322e-05,9
+22,small_scale_vel_correlation_vs_a_3,3,"L_{(4,0)}(r=0.05Mpc/h)",published_rule,"L_(4,0)(r = 0.05 Mpc/h)",label,3.831e-05,3.653e-05,9
+22,small_scale_vel_correlation_vs_a_3,4,"L_{(5,4)}(r=0.05Mpc/h)",published_rule,"L_(5,4)(r = 0.05 Mpc/h)",label,5.885e-05,7.203e-05,4
+22,small_scale_vel_correlation_vs_a_3,5,"L_{(1,0)}(r=0.1Mpc/h)",published_rule,"L_(1,0)(r = 0.1 Mpc/h)",label,1.177e-05,2.524e-05,4
+22,small_scale_vel_correlation_vs_a_3,6,"L_{(2,0)}(r=0.1Mpc/h)",published_rule,"L_(2,0)(r = 0.1 Mpc/h)",label,1.916e-05,2.266e-05,9
+2,Fig19,0,P_\delta(k) from N-body simulation,revised,N-body,position,4.764e-16,4.204e-16,10000
+2,Fig19,1,P_\delta(k) from nonlinear theory,revised,nonlinear theory,position,7.432e-09,1.078e-03,62608
+2,Fig19,2,P_\delta(k) from linear theory,revised,linear theory,position,3.857e-11,7.357e-12,76001
+4,Fig3,0,"|R_{(3,1)}|",revised,"|R_(3,1)|",label,0.000e+00,0.000e+00,119751
+4,Fig3,1,"|L_{(3,2)}|",revised,"|L_(3,2)|",label,0.000e+00,0.000e+00,119751
+4,Fig3,2,"|L_{(3,0)}|",revised,"|L_(3,0)|",label,0.000e+00,0.000e+00,119751
+4,Fig3,3,"|T_{(3,0)}|",revised,"|T_(3,0)|",label,0.000e+00,0.000e+00,119751
+4,Fig3,4,|<u_L^{'3}-u_L^3>|,revised,<u_L^3> = -<u_L'^3>,position,5.000e-01,5.000e-01,119751
+4,Fig3,5,|<(u_L^'-u_L)^3>|,revised,|<(Delta u_L)^3>|,position,2.479e-03,1.519e-03,119751
+5,Fig4,0,"L_{(4,0)}",revised,"|L_(4,0)|",position,0.000e+00,0.000e+00,119751
+5,Fig4,1,"R_{(4,1)}",revised,"|R_(4,1)|",position,0.000e+00,0.000e+00,119751
+5,Fig4,2,"L_{(4,2)}",revised,"|L_(4,2)|",position,0.000e+00,0.000e+00,119751
+5,Fig4,3,"R_{(4,3)}",revised,"|R_(4,3)|",position,0.000e+00,0.000e+00,119751
+5,Fig4,4,<u_L^{'4}>,revised,<u_L'^4>,position,0.000e+00,0.000e+00,119751
+5,Fig4,5,<(u_L^'-u_L)^4>,revised,<(Delta u_L)^4>,position,0.000e+00,0.000e+00,119751
+5,Fig4,6,"T_{(4,0)}",revised,"|T_(4,0)|",position,0.000e+00,0.000e+00,119751
+5,Fig4,7,"T_{(4,2)}",revised,"|T_(4,2)|",position,0.000e+00,0.000e+00,119751
+6,Fig5,0,"|L_{(1,0)}|=|<u_L^'>|",revised,"|L_(1,0)| = |<u_L'>|",position,0.000e+00,0.000e+00,119751
+6,Fig5,1,"|L_{(3,2)}|=|<u^2u_L^'>|",revised,"|L_(3,2)| = |<u^2 u_L'>|",position,0.000e+00,0.000e+00,119751
+6,Fig5,2,"|L_{(5,4)}|=|<u^4u_L^'>|",revised,"|L_(5,4)| = |<u^4 u_L'>|",position,0.000e+00,0.000e+00,119751
+6,Fig5,3,Model,revised,"Eq. 70, p = 1",position,9.132e-06,9.132e-06,2000
+6,Fig5,4,Model,revised,"Eq. 70, p = 3",position,9.132e-06,9.132e-06,2000
+6,Fig5,5,Model,revised,"Eq. 70, p = 5",position,4.349e-02,4.349e-02,2000
+7,Fig6,0,"H^S_{(4,0)}",revised,"H^S_(4,0)",label,2.278e-03,4.395e-01,2000
+7,Fig6,1,"H^S_{(4,2)}",revised,"H^S_(4,2)",label,1.294e-03,3.912e-01,2000
+7,Fig6,2,"H^L_{(4,0)}",revised,"H^L_(4,0)",label,1.923e-05,7.129e-04,116752
+7,Fig6,3,"H^L_{(4,2)}",revised,"H^L_(4,2)",label,3.627e-06,3.699e-04,116752
+8,Fig7,0,"H^s_{(5,0)}",revised,"H^S_(5,0)",label,3.620e-01,2.257e+00,2000
+8,Fig7,1,"H^s_{(5,2)}",revised,"H^S_(5,2)",label,8.555e-05,4.615e-02,2000
+8,Fig7,2,"H^L_{(5,0)}",revised,"H^L_(5,0)",label,7.535e-01,2.074e+01,116752
+8,Fig7,3,"H^L_{(5,2)}",revised,"H^L_(5,2)",label,4.537e-05,1.219e-04,116752
+9,Fig8,0,z=0.0,revised,z = 0,label,0.000e+00,0.000e+00,119751
+9,Fig8,1,z=0.3,revised,z = 0.3,label,0.000e+00,0.000e+00,119751
+9,Fig8,2,z=1.0,revised,z = 1,label,0.000e+00,0.000e+00,119752
+9,Fig8,3,z=2.0,revised,z = 2,label,0.000e+00,0.000e+00,119752
+9,Fig8,4,z=5.0,revised,z = 5,label,0.000e+00,0.000e+00,119750
+9,Fig8,5,z=0.0,revised,"model z = 0 (a_3 = 0.6684, b_3 = 3.3170)",position,2.239e-04,4.695e-05,119751
+9,Fig8,6,z=1.0,revised,"model z = 1 (a_3 = 0.5186, b_3 = 2.8352)",position,6.081e-04,2.657e-04,119751
+9,Fig8,7,z=2.0,revised,"model z = 2 (a_3 = 0.4807, b_3 = 2.4109)",position,1.189e-04,1.153e-04,119751
+10,Fig9,0,z=0.0,revised,z = 0,label,0.000e+00,0.000e+00,119751
+10,Fig9,1,z=0.3,revised,z = 0.3,label,0.000e+00,0.000e+00,119751
+10,Fig9,2,z=1.0,revised,z = 1,label,0.000e+00,0.000e+00,119752
+10,Fig9,3,z=2.0,revised,z = 2,label,0.000e+00,0.000e+00,119752
+10,Fig9,4,z=5.0,revised,z = 5,label,0.000e+00,0.000e+00,119750
+10,Fig9,5,data1,revised,"model z = 0 (a_4 = 1.7430, b_4 = 3.3587)",position,2.080e-01,3.139e-02,119752
+11,Fig10,0,z=0.0,revised,z = 0,label,0.000e+00,0.000e+00,119752
+11,Fig10,1,z=0.3,revised,z = 0.3,label,0.000e+00,0.000e+00,119752
+11,Fig10,2,z=1.0,revised,z = 1,label,0.000e+00,0.000e+00,119752
+11,Fig10,3,z=2.0,revised,z = 2,label,0.000e+00,0.000e+00,119752
+11,Fig10,4,z=0.0,revised,"model z = 0 (a_5 = 9.7678, b_5 = 3.3295)",position,5.422e-05,6.309e-05,119752
+11,Fig10,5,z=2.0,revised,"model z = 2 (a_5 = 5.1591, b_5 = 2.3991)",position,2.257e-04,6.880e-05,119752
+12,Fig11,0,"R_{(2,1)}(r)",revised,"R_(2,1)",label,0.000e+00,0.000e+00,119751
+12,Fig11,1,"R_{(4,3)}(r)",revised,"R_(4,3)",label,0.000e+00,0.000e+00,119751
+12,Fig11,2,"R_{(6,5)}(r)",revised,"R_(6,5)",label,1.012e-01,6.611e-01,119751
+12,Fig11,3,"R_{(4,3)}",revised,"model R_(4,3) (Eq. 104)",position,1.189e-04,8.307e-05,119751
+13,Fig12,0,b_3,revised,b_3,label,1.714e-04,2.837e-04,10
+13,Fig12,1,b_5,revised,b_5,label,9.579e-05,2.821e-04,4
+13,Fig12,2,a_0(u/u_0)^2,revised,a_0(u/u_0)^2,label,6.150e-05,1.856e-04,10
+13,Fig12,3,a_3(u/u_0)^3,revised,a_3(u/u_0)^3,label,1.091e-04,2.070e-04,10
+13,Fig12,4,a_5(u/u_0)^5,revised,a_5(u/u_0)^5,label,7.978e-05,8.204e-05,4
+13,Fig12,5,a_4(u/u_0)^4,revised,a_4(u/u_0)^4,label,3.937e-05,1.374e-04,10
+13,Fig12,6,b_4,revised,b_4,label,1.368e-04,2.436e-04,10
+13,Fig12,7,\alpha_\nu,revised,alpha_nu,label,1.031e-04,3.854e-04,10
+15,Fig20,0,<u^2>,revised,<u^2>,label,7.434e-16,4.085e-15,119751
+15,Fig20,1,<u_L^2>,revised,<u_L^2>,label,0.000e+00,0.000e+00,119751
+15,Fig20,2,<u^2>/<u_L^2>,revised,<u^2>/<u_L^2>,label,7.531e-16,7.225e-15,119751
+15,Fig20,3,<u_T^2>/2,revised,<u_T^2>/2,label,1.283e-15,6.475e-15,119751
+16,Fig14,0,\sigma_u^2 (z=0),revised,sigma_u^2 (z = 0),label,1.067e-04,8.750e-01,119751
+16,Fig14,1,\sigma_u^2 (z=0.3),revised,sigma_u^2 (z = 0.3),label,1.062e-04,8.750e-01,119751
+16,Fig14,2,\sigma_u^2 (z=1.0),revised,sigma_u^2 (z = 1),label,1.057e-04,8.750e-01,119752
+16,Fig14,3,\sigma_u^2 (z=2.0),revised,sigma_u^2 (z = 2),label,1.054e-04,8.734e-01,119752
+16,Fig14,4,\sigma_u^2 (z=5.0),revised,sigma_u^2 (z = 5),label,1.053e-04,4.379e-02,119744
+16,Fig14,5,"(R_{(2,1)}+T_{(2,0)})/4 at z=0",revised,"(R_(2,1)+T_(2,0))/4, z = 0",label,0.000e+00,0.000e+00,119751
+16,Fig14,6,"(R_{(2,1)}+T_{(2,0)})/4 at z=0.3",revised,"(R_(2,1)+T_(2,0))/4, z = 0.3",label,0.000e+00,0.000e+00,119751
+16,Fig14,7,"(R_{(2,1)}+T_{(2,0)})/4 at z=1.0",revised,"(R_(2,1)+T_(2,0))/4, z = 1",label,0.000e+00,0.000e+00,119752
+16,Fig14,8,"(R_{(2,1)}+T_{(2,0)})/4 at z=2.0",revised,"(R_(2,1)+T_(2,0))/4, z = 2",label,0.000e+00,0.000e+00,119752
+16,Fig14,9,"(R_{(2,1)}+T_{(2,0)})/4 at z=5.0",revised,"(R_(2,1)+T_(2,0))/4, z = 5",label,0.000e+00,0.000e+00,119750
+17,ratio_sigma_u2_L32,0,z=0,revised,z = 0,label,1.067e-04,1.393e-01,59875
+17,ratio_sigma_u2_L32,1,z=0.5,revised,z = 0.5,label,1.060e-04,3.790e-01,59876
+17,ratio_sigma_u2_L32,2,z=1.0,revised,z = 1,label,1.057e-04,5.000e-01,59876
+17,ratio_sigma_u2_L32,3,z=2.0,revised,z = 2,label,1.054e-04,1.301e+00,59876
+17,ratio_sigma_u2_L32,4,z=3.0,revised,z = 3,label,1.053e-04,1.153e+00,59874
+17,ratio_sigma_u2_L32,5,z=5.0,revised,z = 5,label,1.053e-04,1.414e+00,59872
+18,Small_scale_sigma_u2_R2_T2_L2_2,0,$\sigma_u^2(r)$ at z=0,revised,"sigma_u^2(r), z = 0",label,1.067e-04,8.750e-01,119751
+18,Small_scale_sigma_u2_R2_T2_L2_2,1,$\sigma_u^2(r)$ at z=0.5,revised,"sigma_u^2(r), z = 0.5",label,1.060e-04,8.750e-01,119752
+18,Small_scale_sigma_u2_R2_T2_L2_2,2,$\sigma_u^2(r)$ at z=1,revised,"sigma_u^2(r), z = 1",label,1.057e-04,8.750e-01,119752
+18,Small_scale_sigma_u2_R2_T2_L2_2,3,$\sigma_u^2(r)$ at z=2,revised,"sigma_u^2(r), z = 2",label,1.054e-04,8.734e-01,119752
+18,Small_scale_sigma_u2_R2_T2_L2_2,4,$\bar\sigma_u^2(r)$ at z=0,revised,"bar sigma_u^2(r), z = 0",label,0.000e+00,2.545e-16,119751
+18,Small_scale_sigma_u2_R2_T2_L2_2,5,$\bar\sigma_u^2(r)$ at z=0.5,revised,"bar sigma_u^2(r), z = 0.5",label,0.000e+00,2.430e-16,119752
+18,Small_scale_sigma_u2_R2_T2_L2_2,6,$\bar\sigma_u^2(r)$ at z=1,revised,"bar sigma_u^2(r), z = 1",label,0.000e+00,2.108e-16,119752
+18,Small_scale_sigma_u2_R2_T2_L2_2,7,$\bar\sigma_u^2(r)$ at z=2,revised,"bar sigma_u^2(r), z = 2",label,0.000e+00,2.247e-16,119752
+19,Fig16,0,\Deltan=1024; \Deltax=0.234Mpc/h;,revised,Delta n = 1024; Delta x = 0.234 Mpc/h,position,1.181e-05,2.264e-02,200
+19,Fig16,1,\Deltan=512; \Deltax=0.468Mpc/h,revised,Delta n = 512; Delta x = 0.468 Mpc/h,label,1.196e-05,5.071e-03,200
+19,Fig16,2,\Deltan=256; \Deltax=0.936Mpc/h,revised,Delta n = 256; Delta x = 0.936 Mpc/h,label,1.286e-05,6.465e-03,200
+19,Fig16,3,\Deltan=128; \Deltax=1.871Mpc/h,revised,Delta n = 128; Delta x = 1.871 Mpc/h,label,1.436e-05,1.470e-04,200
+19,Fig16,4,\Deltan=64; \Deltax=3.742Mpc/h,revised,Delta n = 64; Delta x = 3.742 Mpc/h,label,1.569e-05,3.159e-05,200
+19,Fig16,5,y=x,revised,y = x,label,0.000e+00,0.000e+00,999999
+19,Fig16,6,y=x/2,revised,y = x/2,label,0.000e+00,0.000e+00,999999
+20,Fig17,0,Term 1,revised,Term 1,label,3.810e-06,5.000e-01,119751
+20,Fig17,1,Term 2,revised,Term 2,label,9.132e-06,9.132e-06,119751
+20,Fig17,2,Term1 +Term2,revised,Term 1 + Term 2,label,3.833e-06,1.013e-03,119751
+20,Fig17,3,<u^2>/u^2,revised,<u^2>/u^2,label,7.434e-16,4.085e-15,119751
+20,Fig17,4,\beta^* from Eq. (253),revised,beta*,position,3.833e-06,3.023e+00,119751
+21,Fig18,0,"|R_{(3,1)}+0.5L_{(3,2)}|",revised,"|R_(3,1) + L_(3,2)/2|",position,0.000e+00,0.000e+00,119751
+21,Fig18,1,|<\Deltau_L>|,revised,|<Delta u_L>|,label,0.000e+00,0.000e+00,119751
+21,Fig18,2,Har/u,revised,H a r/u,label,9.132e-06,9.132e-06,991
+21,Fig18,3,|<(\Deltau_L)^3>|/6,revised,|<(Delta u_L)^3>|/6,label,0.000e+00,0.000e+00,119751
+22,small_scale_vel_correlation_vs_a_3,0,"L_{(1,0)}(r=0.05Mpc/h)",revised,"L_(1,0)(r = 0.05 Mpc/h)",label,5.000e-01,5.000e-01,4
+22,small_scale_vel_correlation_vs_a_3,1,"L_{(2,0)}(r=0.05Mpc/h)",revised,"L_(2,0)(r = 0.05 Mpc/h)",label,1.916e-05,2.223e-05,9
+22,small_scale_vel_correlation_vs_a_3,2,"L_{(3,2)}(r=0.05Mpc/h)",revised,"L_(3,2)(r = 0.05 Mpc/h)",label,2.873e-05,4.322e-05,9
+22,small_scale_vel_correlation_vs_a_3,3,"L_{(4,0)}(r=0.05Mpc/h)",revised,"L_(4,0)(r = 0.05 Mpc/h)",label,3.831e-05,3.653e-05,9
+22,small_scale_vel_correlation_vs_a_3,4,"L_{(5,4)}(r=0.05Mpc/h)",revised,"L_(5,4)(r = 0.05 Mpc/h)",label,5.885e-05,7.203e-05,4
+22,small_scale_vel_correlation_vs_a_3,5,"L_{(1,0)}(r=0.1Mpc/h)",revised,"L_(1,0)(r = 0.1 Mpc/h)",label,5.000e-01,5.000e-01,4
+22,small_scale_vel_correlation_vs_a_3,6,"L_{(2,0)}(r=0.1Mpc/h)",revised,"L_(2,0)(r = 0.1 Mpc/h)",label,1.916e-05,2.266e-05,9

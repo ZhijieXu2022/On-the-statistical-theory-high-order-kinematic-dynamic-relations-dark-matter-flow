@@ -1,0 +1,279 @@
+# Publisher,Zhijie Xu,zhijie.xu@pnnl.gov,zhijiexu@hotmail.com,,,,,
+# Updated,10/2026,,,,,,,
+#Name,"Equation-by-equation audit of all 272 equations (184 in the main text, A1-A88 in Appendix A)",,,,,,,
+#Ref. [1],https://doi.org/10.1063/5.0215026,Xu 2024 Phys. Fluids 36 075146 (P19); arXiv:2202.02991,,,,,,
+,,,,,,,,
+,,,,,,,,
+n,printed,label,kind,check,value,tolerance,status,note
+1,1,ZEqnNum286963,definition,"longitudinal and transverse velocities; u_T = u - (u.r)r = -(u x r) x r (vector identity, checked)",1.11e-14,1e-12,pass,
+2,2,ZEqnNum195930,definition,isotropic second-order tensor Q_ij = A2 r_i r_j + B2 delta_ij (standard),,,n/a,
+3,3,ZEqnNum935612,definition,R2 = Q_ii = L2 + 2T2,,,n/a,
+4,4,ZEqnNum950112,definition,L2 = Q_ij r_i r_j / r^2,,,n/a,
+5,5,ZEqnNum991811,definition,T2 = Q_ij n_i n_j = <u_T.u_T'>/2,,,n/a,
+6,6,ZEqnNum314105,identity,"incompressible test field, p=2: T2 = (r^2 L2)_r/(2r), R2 = (r^3 L2)_r/r^2",8.06e-08,1e-06,pass,"valid for constant-divergence flow (even order), Section 4.3.2"
+7,7,ZEqnNum320035,identity,"irrotational test field, p=2: R2 = (r^3 T2)_r/r^2, L2 = (r T2)_r",7.68e-10,1e-06,pass,
+8,8,ZEqnNum971850,model,T2 = a0 u^2 exp(-r/r2) (P20 Eq. 110); a0 and r2 = 23.13 Mpc/h fitted in P20; a0(z=0) = 0.4507,,,pass,"text ""a0 u^2 ~ a, a0(u/u0)^2 = 0.45a"": fitted a0 u^2 ~ a^0.96 (results/fits.json)"
+9,9,ZEqnNum344034,model,"L2, R2 from Eq. 8 through Eq. 7 (numerical derivative, r in units of r2); L2(r2) = 0",2.58e-10,1e-08,fixed (E1),"text: ""r2 = 21.3 Mpc/h"" -> 23.13 Mpc/h (P20 erratum E5; the measured zero of L2 is 21.4 Mpc/h)"
+10,10,ZEqnNum178092,model,"L2 = u^2[1 - (r/r1)^n], n = 1/4 (P20 Eq. 137)",,,pass,power law of P20; exponent derived in Eq. 138
+11,11,ZEqnNum955991,model,"R2, T2 from Eq. 10 through Eq. 6 (numerical)",2.95e-09,1e-07,pass,
+12,12,ZEqnNum883006,definition,third-order correlation tensor Q_ijk = <u_i u_j u_k'>,,,n/a,
+13,13,ZEqnNum264952,identity,Q_ijk(-r) = <u_i' u_j' u_k> = -Q_ijk(r) (exchange of the two points; odd rank in r),,,pass,holds for the isotropic form Eq. 16 because every term is odd in r
+14,14,eq:3,definition,most general isotropic third-order form (A3 r_i r_j r_k + B3 r_i d_jk + C3 r_j d_ki + D3 r_k d_ij),,,n/a,
+15,15,ZEqnNum859159,identity,symmetry i<->j gives B3 = C3,,,pass,
+16,16,ZEqnNum953203,definition,"final form with A3, B3, D3",,,n/a,
+17,17,ZEqnNum550536,identity,L3 = A3 r^3 + (2B3 + D3) r (contraction of Eq. 16),8.83e-16,1e-12,pass,
+18,18,ZEqnNum811607,identity,R3 = A3 r^3 + (4B3 + D3) r,4.79e-16,1e-12,pass,
+19,19,ZEqnNum819453,identity,R31 = A3 r^3 + (2B3 + 3D3) r,4.42e-16,1e-12,pass,
+20,20,ZEqnNum796638,identity,T3 = (R3 - L3)/2 = B3 r,,,pass,follows from Eqs. 17-18
+21,21,ZEqnNum405014,identity,"divergence Q_ijk,k and its trace (finite differences of Eq. 16)",3.68e-11,1e-07,pass,
+22,22,ZEqnNum699561,identity,"divergence Q_ijk,i (finite differences)",3.39e-11,1e-07,pass,
+23,23,ZEqnNum813280,identity,"Q_ijk,ij (finite differences)",1.50e-09,1e-05,pass,
+24,24,ZEqnNum415504,identity,"Q_iki,k (finite differences)",3.29e-11,1e-07,pass,
+25,25,ZEqnNum952051,identity,"Q_iki,k = (r^2 R3)_r/r^2 and Q_iik,k = (r^2 R31)_r/r^2",3.71e-12,1e-08,pass,
+26,26,ZEqnNum285705,identity,"curl eps_ijk Q_mnk,j = (A3 - B3'/r)(eps_imk r_n r_k + eps_ink r_m r_k) (finite differences)",9.88e-11,1e-07,pass,
+27,27,ZEqnNum280236,identity,incompressible test field: 5A3 r + A3' r^2 + 2B3' = 0,4.88e-09,1e-06,pass,
+28,28,ZEqnNum113602,identity,incompressible test field: 2B3 + D3' r + 3D3 = 0,2.06e-09,1e-06,pass,
+29,29,ZEqnNum193922,derivation,from Eqs. 27-28 (algebra): (D3' r)_r + 3D3' = r^2 A3' + 5A3 r,,,pass,verified through Eq. 30 on the test field
+30,30,ZEqnNum934928,identity,A3 = D3'/r and A3 r^2 + 2B3 + 3D3 = 0 on the incompressible test field,2.06e-09,1e-06,pass,
+31,31,eq:21,identity,B3 = -r D3'/2 - 3D3/2 and D3 = -L3/(2r),1.12e-08,1e-06,pass,
+32,32,ZEqnNum235209,identity,Q_ijk in terms of L3 (incompressible test field),4.36e-09,1e-06,pass,
+33,33,eq:23,identity,"Q_ijk,ij = 0 for incompressible flow (test field; |Q_ijk,ij| relative to |grad Q|/r)",1.01e-06,1e-05,pass,
+34,34,ZEqnNum589090,identity,(r^2 R3)_r/r^2 = (1/2r^2) d/dr[(1/r) d/dr(r^4 L3)] (test field),2.20e-07,1e-05,pass,
+35,35,ZEqnNum679713,identity,"(r_i)_,j = (delta_ij - r_i r_j)/r and (r_i)_,i = 2/r",1.70e-11,1e-09,pass,
+36,36,ZEqnNum374800,identity,"incompressible test field p=3: R3 = (r^4 L3)_r/(2r^3), T3 = (r^2 L3)_r/(4r), r^2(r^2 R3)_r = 2(r^4 T3)_r",8.21e-08,1e-06,pass,
+37,37,ZEqnNum218978,identity,"R31 = 0 for incompressible flow (test field, relative to L3)",6.56e-11,1e-06,pass,
+38,38,eq:28,derivation,"Q_ijk,k = <u_i u_j theta'> = theta <u_i u_j> for spatially constant theta",,,pass,uses d/dr_k = d/dx'_k at fixed x. The pair-averaged statistics are mass weighted; see the note on Eq. 65
+39,39,ZEqnNum139076,identity,Eq. 21 with the constant-divergence condition,,,pass,
+40,40,eq:30,identity,r_i r_j contraction of Eq. 39,,,pass,verified through Eq. 41
+41,41,ZEqnNum647632,identity,"R3 + <u_L^2> theta r/2 = (r^4 L3)_r/(2r^3), with <u_L^2> theta := r_i r_j Q_ijk,k (general test field)",4.28e-09,1e-06,pass,
+42,42,eq:32,identity,delta_ij contraction of Eq. 39,,,pass,verified through Eq. 43
+43,43,ZEqnNum487892,identity,"<u^2> theta = (r^2 R31)_r/r^2 with <u^2> theta := Q_iik,k (general test field)",4.05e-08,1e-06,pass,
+44,44,ZEqnNum552000,approximation,Eq. 41 + Eq. 43 with <u^2> = 3<u_L^2>; N-body <u^2>/(3<u_L^2>) over 0.01-100 Mpc/h (z=0),1.96e-01,2e-01,fixed (E14),"range 0.80-1.01; text says ""exact on both small and large scales"": exact only for isotropic velocities, deviation up to 20% near r_t (P20 erratum E13). Text corrected to ""a good approximation"" (erratum E14)"
+45,45,ZEqnNum126019,data,"R31 = theta <u_L^2> r at small r: N-body L_(3,2) vs theta = -3Ha/2 (z = 0, 0.06-0.3 Mpc/h)",-7.95e-02,1e-01,pass,median ratio 0.92 with theta = -3Ha/2 (0.46 with theta = -3Ha)
+46,46,eq:36,identity,curl-free condition B3'/r = A3 (irrotational test field),8.37e-11,1e-06,pass,
+47,47,ZEqnNum337667,identity,irrotational test field p=3: three relations of Eq. 47,1.94e-09,1e-06,pass,
+48,48,eq:M_92,definition,p-th order correlation tensor,,,n/a,
+49,49,M_ZEqnNum442788,definition,"R_(p,q+1)",,,n/a,
+50,50,eq:M_96,definition,"L_(p,q)",,,n/a,
+51,51,M_ZEqnNum340773,definition,"T_(p,q)",,,n/a,
+52,52,M_ZEqnNum747023,identity,"lim r->0 ratio = p/(p-q): exact for isotropic velocity distributions (<cos^n theta> = 1/(n+1)), p = 3, 5, 7",2.22e-16,1e-10,pass,
+53,53,M_ZEqnNum300527,identity,same at r -> infinity (scale-independent isotropic distributions),2.22e-16,1e-10,pass,
+54,54,eq:M_102,data,"odd p: L_(p,q)/L_(p,0) -> p/(p-q) at small and large r; N-body medians at 0.3-1 and 50-100 Mpc/h (z=0)",,,flagged,"L32/L30 (3): 3.33, 1.99; L52/L50 (5/3): 1.23, 1.71; L54/L50 (5): 3.71, 3.22. Odd correlations are noisy; the limits are not reached clearly (L_(5,0) is the outlier, see open issue)"
+55,55,eq:M_103,data,"even p: R_(p,q+1)/L_(p,0) -> (p+1)/(p-q-1) as r -> 0; N-body medians 0.04-0.1 Mpc/h (z=0), p = 4, 6",7.69e-02,1e-01,pass,R41/L40 1.649 vs 1.667; R43/L40 4.789 vs 5.000; R61/L60 1.386 vs 1.400; R63/L60 2.274 vs 2.333; R65/L60 6.462 vs 7.000
+56,56,M_ZEqnNum950434,data,"even p: L_(p,q)/L_(p,0) -> (p+1)/(p+1-q) as r -> 0; N-body medians 0.04-0.1 Mpc/h",3.38e-02,1e-01,pass,L42/L40 1.642 vs 1.667; L62/L60 1.386 vs 1.400; L64/L60 2.254 vs 2.333. The limit r->infinity in the label is not derived (0/0 for even p); data at 50-100 Mpc/h: L42/L40 = 1.66
+57,57,M_ZEqnNum234089,identity,"incompressible test fields, p = 3-6, all even q < p-1: (p-q-1) R = (r^(p-q+1) L)_r / r^(p-q)",2.88e-07,1e-05,pass,
+58,58,eq:M_110,identity,incompressible test fields: 2(p-q-1) T = (r^2 L)_r/r,9.69e-07,1e-05,pass,
+59,59,M_ZEqnNum533624,identity,incompressible test fields: (r^2 R)_r = 2 (r^(p-q+1) T)_r / r^(p-q-1),1.35e-07,1e-05,pass,
+60,60,M_ZEqnNum365670,identity,"general (rotational, divergent) test fields p = 3-5: (p-q-1)R + [contracted div Q] r = (r^(p-q+1) L)_r / r^(p-q)",1.95e-07,1e-05,pass,identity for any isotropic tensor; it becomes the kinematic relation when div Q = theta <...> (spatially constant theta)
+61,61,M_ZEqnNum136987,statement,odd one-point moments vanish as r -> 0,,,pass,"N-body: <u_L^3>/u^3 = 0.11 at 0.05 Mpc/h, 0.02 at 0.005; consistent with -> 0 linearly (mean infall ~ r)"
+62,62,M_ZEqnNum383689,identity,Eq. 60 with q = p-1,,,pass,special case of the tested identity
+63,63,M_ZEqnNum213847,identity,Eq. 60 with q = 0,,,pass,special case of the tested identity
+64,64,M_ZEqnNum719510,derivation,"L_(p,p-1) = (p/3) theta <u_L^(p-1)> r: integrate Eq. 62 with r-independent <u^(p-1)>, then Eq. 52",,,pass,
+65,65,M_ZEqnNum643394,identity,p = 1 case of Eq. 60: theta = (r^2 <Delta u_L>)_r/(2r^2); with <Delta u_L> = -Har it gives theta = -3Ha/2,,,pass,"N-body (z=0, 0.06-0.3 Mpc/h): median <Delta u_L>/(-Har) = 1.12. Inconsistent with ""theta = -3Ha"" in Section 3.1.2 and Eq. 156 (the divergence of u_r = -Ha r): erratum E2 (theta = -3Ha/2 is the value that enters the kinematic relations of pair-averaged statistics)"
+66,66,M_ZEqnNum591192,derivation,Eq. 60 with Eq. 52 and Eq. 62 (algebra),,,pass,uses the limit ratio Eq. 52 at finite r (approximation)
+67,67,M_ZEqnNum900611,identity,"irrotational test fields, p = 3-6, even q: relation 1 of Eqs. 67-69",7.45e-10,1e-05,pass,
+68,68,M_ZEqnNum602698,identity,"irrotational test fields, p = 3-6, even q: relation 2 of Eqs. 67-69",1.87e-10,1e-05,pass,
+69,69,M_ZEqnNum433592,identity,"irrotational test fields, p = 3-6, even q: relation 3 of Eqs. 67-69",3.86e-09,1e-05,pass,
+70,70,ZEqnNum676855,derivation,(p/3) theta <u_L^(p-1)>/u^p = -2^((p-3)/2) p K_(p-1) Har/u for theta = -3Ha/2 and <u_L^2> = 2u^2,0.00e+00,1e-12,pass,Fig. 6 (published Fig. 5) uses K_4 = 4.6; text gives K_4 = 4.8; N-body <u_L^4>/<u_L^2>^2 = 4.65-4.92 at 0.01-0.1 Mpc/h
+71,71,eq:37,definition,"generalized kurtosis K_n(u_L, r->0)",,,n/a,
+72,72,ZEqnNum167557,derivation,"integral form of Eq. 66 (integration by parts, checked algebraically)",,,pass,"N-body values in Fig. 8: H^S_(5,2) ~ 0.94-0.96 at 0.1-2 Mpc/h; H^S_(5,0) is not ~1 (open issue O1)"
+73,73,ZEqnNum729182,identity,"H^S_(4,0) = 1 for the incompressible test field (quadrature of Eq. 73)",3.66e-08,1e-05,pass,
+74,74,ZEqnNum467352,identity,"H^L_(4,0) = 1 for the irrotational test field (quadrature of Eq. 74)",3.45e-11,1e-05,pass,
+75,75,ZEqnNum709847,model,adhesion model (Gurbatov et al. 1989): dv/dt + v.grad v/a = c v + nu lap v,,,n/a,phenomenological model; nu(a) interpreted in Section 6.1
+76,76,ZEqnNum911265,model,Zeldovich approximation (linear terms only),,,n/a,
+77,77,eq:138,identity,"c = 4 pi G rho0/(H f) - H = H/2 for Omega_m = 1 (4 pi G rho0 = 3H^2/2, f = 1)",5.55e-16,1e-14,pass,
+78,78,ZEqnNum683197,identity,"u.grad u = grad(u.u)/2 + (curl u) x u (random smooth field, finite differences)",2.34e-11,1e-08,pass,
+79,79,ZEqnNum248930,identity,lap u = grad div u - curl curl u (random field),7.86e-12,1e-06,pass,
+80,80,ZEqnNum307676,identity,Eqs. 78-79 with curl v = 0,,,pass,
+81,81,ZEqnNum284543,identity,Eq. 75 with Eq. 80,,,pass,
+82,82,ZEqnNum373540,identity,index form of Eq. 81 at x,,,pass,
+83,83,ZEqnNum198491,identity,index form at x',,,pass,
+84,84,ZEqnNum527474,derivation,"multiply by v_i', v_j, add and average over pairs",,,pass,LHS d<v_j v_i'>/dt by the product rule; RHS c<...> + nu lap <...> uses independence of v' from x and of v from x'
+85,85,ZEqnNum674282,derivation,"d/dx_j = -d/dr_j, d/dx'_i = d/dr_i and <v_k v_k v_j'>(r) = -<v_k' v_k' v_j>(r) give +(1/2a)(Q_kki,j + Q_kkj,i)",,,pass,sign and factor 1/(2a) re-derived; 2cQ_ij and 2nu lap Q_ij from the sums of the two transposed terms (Q_ij symmetric)
+86,86,ZEqnNum923677,derivation,trace of Eq. 85: d R2/dt = 2 Gamma + 2c R2 + 2 nu lap R2,,,pass,
+87,87,eq:148,definition,"Gamma = (1/2a) Q_kki,i",,,n/a,
+88,88,eq:149,identity,Q_kki = (A3 r^2 + 2B3 + 3D3) r_i = R31 r_hat_i (published middle term has r_hat_i),2.85e-16,1e-12,fixed (E3),"published ""(A3 r^2+2B3+3D3) r_hat_i"" differs by the factor r (rel. dev. 0.30 at r = 1.3): typo, corrected to r_i (erratum E3)"
+89,89,ZEqnNum671139,identity,"Q_kki,i = (r^2 R31)_r/r^2 (Eq. 25) and Gamma = (r^2 R31)_r/(2a r^2)",,,pass,
+90,90,ZEqnNum564068,model,R2 = 2R(r) = a0 u^2 e^{-r/r2}(3 - r/r2) (Eq. 9; R = R2/2 is the notation of P20),,,pass,"text: ""r2 = 23.13 Mpc/h"" (consistent with Eq. 9 after erratum E1)"
+91,91,ZEqnNum181529,identity,R2 ~ a0 u^2 ~ a: dR2/dt = Ha dR2/da = H R2 = 2c R2,,,pass,N-body a0 u^2 ~ a^0.96 (fits.json)
+92,92,eq:153,derivation,Eq. 86 with Eqs. 89 and 91: Gamma = -nu lap R2,,,pass,
+93,93,ZEqnNum715845,derivation,integrate Eq. 92 (regular at r = 0): R31 = -2 a nu R2',,,pass,
+94,94,ZEqnNum179171,identity,xi = -lap R2/(aHf)^2 = a0 u^2 e^{-x}(x^2 - 7x + 8)/(r r2 (aHf)^2) (numerical Laplacian of Eq. 90),2.47e-10,1e-07,pass,first equality: linear theory (P20 Eq. 120)
+95,95,eq:156,identity,Gamma = nu (aHf)^2 xi = nu a0 u^2 e^{-x}(x^2-7x+8)/(r r2),2.47e-10,1e-07,pass,same algebra as Eq. 94
+96,96,ZEqnNum846484,derivation,"Eqs. 89, 95: (r^2 R31)_r/r^2 = 2 a nu xi (aHf)^2",,,pass,
+97,97,ZEqnNum990753,approximation,"pair conservation <Delta u_L> = -(2Ha/r^2) int xi y^2 dy (linear regime); N-body z=0 ratio <Delta u_L>/prediction, 5-40 Mpc/h",-5.01e-02,2e-01,pass,"median 0.95, range 0.86-0.97 (10-90%); xi from pair counts"
+98,98,ZEqnNum283672,identity,<Delta u_L> = 2 R2'/(aHf^2) = 2 a0 u^2 e^{-x}(x - 4)/(aH r2 f^2),3.18e-13,1e-08,pass,"""aHf(Omega_m)^2"" means a H f^2 (aH in the denominator once): from Eq. 97 with Eq. 94"
+99,99,ZEqnNum216206,identity,R31 = -nu H a^2 f^2 <Delta u_L> = -2 a0 u^2 a nu e^{-x}(x - 4)/r2,3.18e-13,1e-08,pass,
+100,100,ZEqnNum136752,model,"L_(3,2) = a3 u^3 e^{-x}(x - b3): fit 20 Mpc/h < r < end, r2 = 23.13 Mpc/h (reconstructed procedure)",,,pass,"a3 = 0.6684, b3 = 3.3170 at z = 0; Fig. 13 values reproduced to < 5e-4 (check_figure_data.json). The dynamic relation Eq. 99 predicts b3 = 4; fitted b3 = 1.4-3.3"
+101,101,ZEqnNum529435,identity,a3 = -2 a0 a nu/(u r2) <=> alpha_nu = -nu/(u0 r2) = a3 u/(2 a0 a u0) (algebra),,,pass,alpha_nu(z=0) = 0.7416 (published 0.7417)
+102,102,ZEqnNum133069,derivation,nu = -R31/(H a^2 f^2 <Delta u_L>) (from Eq. 99); with eps_u = -(3/2)u^2/t the second form equals -a3 u r2/(2 a0 a),,,flagged,"beta_nu = 4.84 (text 4.9); nu(z=0) = -12166 km/s Mpc (text ~ -1e4). ""nu ~ a^(1/2)"" is not supported by the fitted alpha_nu(a): alpha_nu ~ a^0.07 over 0.09 <= a <= 1 (a^0.25 for a >= 1/3); nu = -alpha_nu u0 r2"
+103,103,ZEqnNum1330699,data,"eps_u = -(3/2) u0^2/t0 (h = 0.5, t0 = 2/(3H0) = 13.04 Gyr)",3.36e-03,1e-02,pass,computed -4.585e-07 m^2/s^3. The middle step du^2/dt ~ u^2/t needs u^2 ~ t (a^(3/2)); N-body u^2 ~ a^1.20
+104,104,ZEqnNum475527,model,"R_(4,3) = a4 u^4 e^{-x}(b4 - x) (fit as for Eq. 100)",,,pass,"a4 = 1.7430, b4 = 3.3587 at z = 0"
+105,105,ZEqnNum137224,model,"L_(5,4) = a5 u^5 e^{-x}(x - b5)",,,pass,"a5 = 9.7678, b5 = 3.3295 at z = 0"
+106,106,ZEqnNum995688,data,"L_(q+1,q) ~ (nu H a^2)^(q/2) L_(1,0) ~ a^((q+3)/2): q = 2 -> a^2.5, q = 4 -> a^3.5; fitted a3 u^3 and a5 u^5 vs a",,,flagged,"a3 u^3 ~ a^2.03 (all 10 z; a^2.19 for a >= 1/3), a5 u^5 ~ a^3.72 (4 z). The exponent count assumes nu ~ a^(1/2) (see Eq. 102)"
+107,107,eq:167,statement,"generalized dynamic relation (proportionality, by analogy with Eq. 93)",,,n/a,
+108,108,ZEqnNum252855,data,"R_(q,q-1) ~ a^(q/2): q = 2 -> a, q = 4 -> a^2",4.80e-02,1e-01,pass,"a0 u^2 ~ a^0.96, a4 u^4 ~ a^2.10"
+109,109,eq:169,derivation,r_j-projection of Eq. 82 with d/dx_j = -r_j d/dr and lap v = grad div v,,,pass,
+110,110,ZEqnNum409936,derivation,r_i-projection of Eq. 83,,,pass,
+111,111,ZEqnNum870821,derivation,"Eq. 110 - Eq. 109 averaged: (1/a) d<u^2>/dr, c<Delta u_L>, 2 nu d<theta>/dr with Eq. 112",,,pass,
+112,112,eq:172,definition,<u^2> and <theta> on scale r,,,n/a,
+113,113,ZEqnNum749059,model,linear theory: delta ~ -div u/(aHf) (P20 Eq. 119),,,n/a,
+114,114,ZEqnNum732704,identity,"<theta> = d_n <u_n'> = (r^2 <Delta u_L>)_r/(2r^2) with <Delta u_L> = 2<u_L'> (isotropic vector, finite differences)",3.97e-11,1e-08,pass,
+115,115,ZEqnNum344666,identity,"Eq. 114 with Eq. 97: <theta> = -Ha xi(r) (quadrature, model xi, units Ha = 1)",2.11e-12,1e-06,pass,second equality uses Eq. 113
+116,116,ZEqnNum711863,data,"f<delta> = xi(r) on large scales (z = 0, 15-35 Mpc/h): <delta> from DTFE densities vs pair-count xi",5.31e-02,2e-01,pass,"median <delta>/xi = 0.95 with the pair-count xi; the published Fig. 13 ""xi"" curve is <(1+delta)(1+delta')> - 1 (= 2<delta> + <delta delta'>), for which <delta>/curve = 0.24 (erratum E7)"
+117,117,ZEqnNum207490,derivation,Zeldovich approximation projected on r_hat,,,pass,
+118,118,ZEqnNum207490-2,derivation,<Delta u_L> ~ t ~ a^(3/2) on large scales: (1/3) d<Delta u_L>/dt = (H/2)<Delta u_L>; N-body <Delta u_L> at 10-30 Mpc/h vs a,7.89e-02,2e-01,pass,"<Delta u_L> ~ a^1.42 (z = 0, 0.3, 1, 2)"
+119,119,eq:178,derivation,Eq. 111 with Eqs. 118 and 115: d<u^2>/dr = 2 nu a d<theta>/dr = -2 nu H a^2 dxi/dr,,,pass,
+120,120,ZEqnNum864804,data,"K_ex = <u^2>/(3u^2) - 1 = -2 nu H a^2 xi/(3u^2); N-body z=0, 10-30 Mpc/h: K_ex/xi vs -2 nu H a^2/(3u^2) with the fitted nu",,,flagged,"measured K_ex/xi = 1.56; predicted 3.22 (nu = -6083 km/s Mpc/h): proportionality holds, the coefficient differs by a factor 2.1. Last line: (a^2 H/(a H f)^2) = 1/(H f^2)"
+121,121,ZEqnNum959459,derivation,time average of Eq. 81 with c = H/2; Reynolds decomposition of grad(v.v)/2,,,pass,
+122,122,,identity,nu_edd lap v_mean = mean(v'.grad v') = div mean(v' x v') for incompressible flow (closure statement; identity div(v v) = v div v + v.grad v),,,pass,
+123,123,eq:223,definition,closure: (Delta nu) lap v_mean = -(1/2a) grad mean(v'.v'),,,n/a,
+124,124,ZEqnNum959459-2,derivation,Eq. 121 with Eq. 123: nu_tau = nu + Delta nu,,,pass,
+125,125,ZEqnNum471934,derivation,Eq. 123 with lap v = grad div v = -aHf grad delta (Eq. 113): grad mean(v'^2) = 2a^2 H f (Delta nu) grad delta,,,pass,
+126,126,eq:225,identity,mean(v^2) = v_mean^2 + mean(v'^2),,,pass,
+127,127,eq:226,identity,rearranged Eq. 126,,,pass,
+128,128,ZEqnNum451933,definition,"sigma_u^2 = (1/3) int_{-inf}^{inf} E_u W^2 dk, sigma_d^2 = u^2 - sigma_u^2 (P20 Eqs. 27, 29)",0.00e+00,1e-10,pass,checked: sigma_u^2 + sigma_d^2 = u^2 on a test spectrum
+129,129,ZEqnNum605014,identity,W(x) = 3(sin x - x cos x)/x^3 = 3 j1(x)/x,1.50e-16,1e-14,pass,
+130,130,ZEqnNum369683,approximation,"sigma_u^2 ~ (R_(2,1) + T_(2,0))/4 on large scales; N-body z = 0, 3-30 Mpc/h",5.02e-02,2e-01,pass,ratio 0.99-1.05 (trapezoid rule); with the published cumsum rule the same within 1%
+131,131,ZEqnNum4450711,statement,"dimensional argument: eps ~ -L_(3,2)/r2 ~ nu sigma_u^2/r2^2",,,n/a,
+132,132,ZEqnNum445071,approximation,"-L_(3,2) ~ alpha_r u sigma_u^2 with a scale-independent alpha_r on large scales; N-body z = 0, 3-30 Mpc/h",,,flagged,-L32/(u sigma_u^2) = 4.52-7.33 (5-95%) over 3-30 Mpc/h: roughly constant (+-25%); alpha_r = 4a3/a0 = 5.93 (Eq. 134)
+133,133,ZEqnNum731622,derivation,Eq. 132 with Eq. 93 (R31 = L32 = -2 a nu R2'),,,pass,
+134,134,eq:196,identity,"T_(2,0) = C e^{-r/r2} solves Eq. 133 with Eq. 7 iff r2 = -8 nu a/(alpha_r u)",7.95e-10,1e-08,pass,"alpha_r = 4a3/a0 follows from Eq. 101 (algebra). ""alpha_r ~ a^(3/4)"": fitted alpha_r ~ a^0.47"
+135,135,eq:188,approximation,"sigma_u^2 ~ (R+T+L)/5 on small scales; N-body z = 0, 0.03-0.3 Mpc/h (trapezoid rule)",1.47e-02,1e-01,pass,ratio 0.99-1.01
+136,136,ZEqnNum910224,identity,R2(2r) = (1/24r^2) d/dr[r^-2 d/dr(r^3 d/dr(sigma_u^2 r^4))] (P20 Eq. 30; test spectrum),6.51e-09,1e-04,pass,
+137,137,eq:141-2,identity,"sigma_d^2 = 24 2^n u^2 (r/r1)^n/((4+n)(6+n)) for R2 of Eq. 11 (Eq. 136 with numerical derivatives, n = 1/4)",8.19e-10,1e-06,pass,
+138,138,eq:189,derivation,(10+3n)(4+n)(6+n) = 15 2^(n+4) from Eq. 135 with Eqs. 10-11 and Eq. 137,,,pass,"root n = 0.27329 (""n ~ 1/4"")"
+139,139,ZEqnNum987321,model,"Jeans (momentum) equation in comoving coordinates (Mo, van den Bosch & White 2010)",,,n/a,
+140,140,ZEqnNum643096,definition,v = v_h (motion of haloes) + v_v (motion in haloes),,,n/a,
+141,141,ZEqnNum743696,definition,v_v = v_r + v_phi (meridional flow neglected),,,n/a,
+142,142,ZEqnNum110870,model,"v_r = -Ha r (stable clustering), v_phi = omega_h x r",,,n/a,
+143,143,ZEqnNum946038,identity,"grad v_r = -Ha I, grad v_phi antisymmetric, curl v_r = 0, v_phi = r.grad v_phi",1.59e-14,1e-08,pass,
+144,144,ZEqnNum309912,identity,v_r.grad v_r/a + H v_r = 0,6.33e-15,1e-10,pass,absolute residual (|H v_r| ~ 0.5)
+145,145,eq:203,identity,H v_phi + omega_h x v_r/a = 0,2.78e-17,1e-12,pass,
+146,146,ZEqnNum755386,identity,v_phi.grad v_r/a + H v_phi = 0,3.53e-15,1e-08,pass,
+147,147,ZEqnNum321682,identity,v_r.grad v_phi/a = omega_h x v_r/a,1.17e-15,1e-08,pass,
+148,148,ZEqnNum157890,model,dv_phi/dt + v_phi.grad v_phi/a = omega_h x v_phi/a,,,pass,"v_phi.grad v_phi = omega x v_phi exactly (residual 1.5e-15), so the equation states dv_phi/dt = 0 (steady rotation), not a separate law"
+149,149,ZEqnNum611390,derivation,"sum of Eqs. 144-148, with curl v_v = 2 omega_h",,,pass,re-derived term by term
+150,150,ZEqnNum478697,approximation,v_h nearly uniform on the halo scale,,,n/a,
+151,151,eq:209,identity,A x (curl B) = A.[(grad B)^T - grad B] with (grad B)_jk = d_j B_k (random fields),4.07e-16,1e-08,pass,
+152,152,ZEqnNum863234,identity,v_h.grad v_phi = omega_h x v_h; v_h.grad v_r/a + H v_h = 0 (uniform v_h),7.11e-15,1e-08,pass,
+153,153,ZEqnNum701799,derivation,Eq. 152 in the momentum balance of v_h,,,pass,
+154,154,eq:212,derivation,"sum of Eqs. 149, 150, 153 with curl v = curl v_phi = 2 omega_h",,,pass,
+155,155,eq:213,derivation,v_r and v_h irrotational: their time derivatives are gradients,,,pass,holds for any curl-free field (the factor 1/a in the potential is absorbed in phi*)
+156,156,ZEqnNum598457,model,self-closed equations: div v = theta = -3Ha and Eq. 154 with coefficient gamma,,,flagged (O2),"theta = -3Ha is the divergence of v_r = -Ha r; the kinematic relations and every small-scale result (Eqs. 65, 70, 179-180, Fig. 6) use theta = -3Ha/2, the value implied by <Delta u_L> = -Har through Eq. 65. Open issue O2: the value to use in Eqs. 156-179 is the author's decision; an \addnote states it (Sec. 3.1.2 is corrected as erratum E2)"
+157,157,ZEqnNum598457-2,identity,"exact solution of Eq. 156 for gamma = 1/2: v = -Ha r + omega z x r (omega constant, Ha = H0 a^-1/2), phi* = F - H^2a^2r^2/4 (finite differences)",4.48e-13,1e-07,pass,checked by hand as well: LHS = H^2 a r/2 - H omega z x r - (omega^2/a) r_perp = RHS term by term; div v = -3Ha
+158,158,eq:215,identity,div(v v) = v div v + v.grad v,4.19e-11,1e-08,pass,
+159,159,ZEqnNum657666,identity,Eq. 156 rewritten with Eq. 78,,,pass,
+160,160,ZEqnNum793273,identity,Eq. 159 with Eq. 158 and div v = theta,,,pass,
+161,161,eq:218,derivation,gamma = 1 and grad phi* = -(3/2)Ha v - a nu lap v reduce Eqs. 159-160 to Eq. 81 (c = H/2),,,pass,requires v irrotational (lap v = grad div v)
+162,162,ZEqnNum312598,identity,curl of Eq. 156,,,pass,
+163,163,ZEqnNum550342,identity,Eq. 162 with curl(v.grad v) = curl((curl v) x v),3.40e-11,1e-05,pass,
+164,164,eq:227,identity,curl(A x B) = A div B - B div A + B.grad A - A.grad B,1.48e-10,1e-07,pass,
+165,165,ZEqnNum968516,derivation,Eq. 163 with Eq. 164 and div omega = 0: [1 + (1-gamma) theta/(Ha)] H omega,,,pass,re-derived
+166,166,eq:229,identity,lap v = -curl omega for spatially constant divergence (Eq. 79),,,pass,
+167,167,eq:230,identity,v = -(1/4pi) int [curl omega]'/|x - x'| dx',,,fixed (E4),lap v = -curl omega gives v = +(1/4pi) int [curl omega]'/|x - x'| dx' (Green function of the Laplacian is -1/(4 pi |x - x'|)); Biot-Savart form. Sign corrected (erratum E4)
+168,168,eq:231,model,vorticity equation of incompressible Navier-Stokes flow (standard),,,n/a,
+169,169,ZEqnNum517069,derivation,omega . Eq. 165,,,pass,
+170,170,eq:244,identity,index form of Eq. 160 at x,,,pass,
+171,171,eq:245,identity,index form at x',,,pass,
+172,172,eq:246,derivation,"multiply, add, average",,,pass,
+173,173,ZEqnNum539624,derivation,"Q_ij form: (2-2gamma)/a Q_ikj,k + gamma/a Q_kkj,i; the transposed partners are combined assuming Q_ij = Q_ji",,,pass,exact after contraction with delta_ij (Eq. 175)
+174,174,eq:248,identity,d<phi* v_j'>/dx_j = -d<phi* v_j'>/dr_j = -theta <phi*> (constant divergence),,,pass,
+175,175,ZEqnNum168148,derivation,trace of Eq. 173 with Eqs. 174 and 176,,,pass,
+176,176,eq:250,identity,Eqs. 25 and 89,,,pass,
+177,177,ZEqnNum330309,derivation,integral of Eq. 175 for r-independent <phi*> (algebra checked numerically),0.00e+00,1e-10,pass,
+178,178,eq:252,model,"R_(2,1) of Eq. 11 and d ln R_(2,1)/d ln a = 3/2 (u^2 ~ t)",,,flagged,"N-body u^2 ~ a^1.20 (0.09 <= a <= 1), so d ln R/d ln a ~ 1.2 rather than 3/2; changes term 1 of Eq. 179 from 5 to ~4.7 (gamma = 1/2, theta = -3Ha/2)"
+179,179,ZEqnNum443061,derivation,"Eq. 177 with gamma = 1/2, theta = -3Ha/2, dlnR/dlna = 3/2: coefficients -1/(Har u^2) and 5/(u^2 r^3)",0.00e+00,1e-12,pass,with theta = -3Ha the coefficients would be -1/2 and 3.5; the published form requires theta = -3Ha/2 (open issue O2)
+180,180,ZEqnNum558518,data,"R_(3,1) + L_(3,2)/2 = -Ha u^2 r = <Delta u_L> u^2 = (4/9) eps_u a r; N-body z = 0: (R31 + L32/2)/(-Ha r u^2) at r = 0.1 Mpc/h",,,flagged,"ratio 0.31, 0.99, 2.39, 4.65, 5.75 at r = 0.06, 0.1, 0.2, 0.4, 1 Mpc/h: the relation holds only near r ~ 0.1 Mpc/h (it is Term 2 of Eq. 179, plotted in Fig. 21); the linear-in-r form is not a plateau of the data. Algebra (4/9) eps_u a r = -H a u^2 r with eps_u = -(9/4) u^2 H is exact"
+181,181,eq:255,data,eps_u = -(3/2) du^2/dt ~ -(3/2) u0^2/t0 = -4.6e-7 m^2/s^3,3.36e-03,1e-02,pass,same as Eq. 103
+182,182,eq:256,data,"generalized stable clustering: <(Du)^3> = 3<(Du)^2><Du>; N-body z = 0, 0.06-0.4 Mpc/h",1.43e-01,2e-01,pass,median ratio 1.14 (10-90%: 0.98-1.24)
+183,183,ZEqnNum260646,data,<(Du)^3>/6 = <Du> u^2 requires <(Du)^2> = 2u^2; N-body <(Du)^3>/(6 <Du> u^2) with <Du> = -Har,,,flagged,"ratio 1.80, 2.38, 2.69, 4.25 at r = 0.06, 0.1, 0.2, 0.4 Mpc/h; <(Du)^2>/u^2 = 3.06, 3.56, 5.05 (not 2: pair velocity dispersion exceeds 2u^2 inside haloes). The first equality (Eq. 182 with Eq. 180) is algebra"
+184,184,eq:258,derivation,<(Du)^3> = (8/3) eps_u a r from Eq. 183 with eps_u = -(9/4) u^2 H,0.00e+00,1e-12,pass,
+185,A1,ZEqnNum829225,identity,"(r_hat_i)_,j = (delta_ij - r_hat_i r_hat_j)/r = (r_hat_j)_,i (finite differences)",6.71e-11,1e-07,pass,
+186,A2,ZEqnNum105713,identity,"(r_hat_i r_hat_j)_,k (finite differences)",1.76e-10,1e-07,pass,
+187,A3,eq:46,identity,"(r_hat_i r_hat_j r_hat_k)_,l (finite differences)",2.70e-10,1e-07,pass,
+188,A4,ZEqnNum424097,identity,"(r_hat_i r_hat_j r_hat_k r_hat_l)_,m (finite differences)",3.64e-10,1e-07,pass,
+189,A5,ZEqnNum669596,identity,radial derivatives of r_hat products vanish,2.06e-10,1e-07,pass,absolute
+190,A6,ZEqnNum558872,identity,"divergences: (r_hat_i)_,i = 2/r, (r_hat_i r_hat_j)_,j = 2 r_hat_i/r, (r_hat_i r_hat_j r_hat_k)_,k = 2 r_hat_i r_hat_j/r",5.38e-10,1e-07,pass,absolute
+191,A7,eq:50,identity,"(r_i)_,j = delta_ij, (r_hat_i r_j)_,j = 3 r_hat_i, (r_hat_i r_hat_j r_k)_,k = 3 r_hat_i r_hat_j",1.94e-10,1e-07,pass,absolute
+192,A8,eq:51,definition,"Q_ij, R2, L2, R2 = L2 + 2T2 (as Eqs. 2-5)",,,n/a,
+193,A9,eq:52,definition,isotropic Q_ij = A2 r_i r_j + B2 delta_ij (as Eq. 2),,,n/a,
+194,A10,ZEqnNum900457,identity,Q_ij r_hat_i (delta_jk - r_hat_j r_hat_k) = 0 for isotropic Q_ij (<u_L u_k'> is along r_hat),1.60e-16,1e-14,pass,absolute
+195,A11,ZEqnNum535326,derivation,product rule with Eq. A1,,,pass,
+196,A12,ZEqnNum723761,derivation,Eq. A11 with Eq. A10 and Eq. A6,,,pass,
+197,A13,ZEqnNum386533,identity,"incompressible p = 2: 2T2 = (r^2 L2)_r/r, R2 = (r^3 L2)_r/r^2 (same relation as Eq. 6)",8.06e-08,1e-06,pass,"see Eq. 6: valid for constant-divergence flow (even order), Section 4.3.2"
+198,A14,eq:57,identity,directional derivative of a function of r along r_hat,,,pass,
+199,A15,ZEqnNum564359,identity,eps_mik eps_mjn = delta_ij delta_kn - delta_in delta_jk (curl-free condition contracted with r_hat),0.00e+00,0e+00,pass,
+200,A16,eq:59,derivation,Eq. A15 expanded with the product rule,,,pass,
+201,A17,ZEqnNum474481,derivation,"Eq. A16 with Eqs. A1, 194",,,pass,
+202,A18,ZEqnNum908347,derivation,Eq. A17 with Eq. A14,,,pass,
+203,A19,ZEqnNum382437,identity,"irrotational p = 2: R2 = (r^3 T2)_r/r^2, L2 = (r T2)_r (same relation as Eq. 7)",7.68e-10,1e-06,pass,see Eq. 7
+204,A20,eq:63,definition,"Q_ijk, R3, R31, L3, T3 (as Eqs. 12-20)",,,n/a,
+205,A21,ZEqnNum213105,identity,Q_ijk r_hat_i r_hat_j (delta_kl - r_hat_k r_hat_l) = 0 (isotropic Q_ijk of Eq. 16),1.11e-16,1e-14,pass,absolute
+206,A22,ZEqnNum933594,identity,Q_ijk r_hat_j r_hat_k (delta_il - r_hat_i r_hat_l) = 0,1.11e-16,1e-14,pass,absolute
+207,A23,ZEqnNum805450,identity,Q_ijk delta_ij (delta_kl - r_hat_k r_hat_l) = 0,1.94e-16,1e-14,pass,absolute
+208,A24,eq:67,derivation,product rule with Eq. A2,,,pass,
+209,A25,ZEqnNum572382,derivation,Eq. A24 with Eqs. A21-A22 and Eq. A6,,,pass,
+210,A26,ZEqnNum772849,identity,"incompressible p = 3: 2R3 = (r^4 L3)_r/r^3, 4T3 = (r^2 L3)_r/r (same relation as Eq. 36)",8.21e-08,1e-06,pass,see Eq. 36
+211,A27,eq:70,derivation,"Eq. A25 with Q_ijk,k = theta <u_i u_j> (Eq. 38)",,,pass,
+212,A28,eq:71,identity,R3 + <u_L^2> theta r/2 = (r^4 L3)_r/(2r^3) (same relation as Eq. 41),4.28e-09,1e-06,pass,see Eq. 41
+213,A29,eq:72,derivation,delta_ij contraction with Eq. A23 and Eq. A6,,,pass,
+214,A30,eq:73,identity,<u^2> theta = (r^2 R31)_r/r^2 (same relation as Eq. 43),4.05e-08,1e-06,pass,see Eq. 43
+215,A31,eq:74,approximation,"R3 + (r^2 R31)_r/(6r) = (r^4 L3)_r/(2r^3), using <u^2> = 3<u_L^2> (same relation as Eq. 44)",1.96e-01,2e-01,flagged (see Eq. 44),"see Eq. 44: range 0.80-1.01; text says ""exact on both small and large scales"": exact only for isotropic velocities, deviation up to 20% near r_t (P20 erratum E13). Text corrected to ""a good approximation"" (erratum E14)"
+216,A32,eq:75,derivation,"curl-free condition contracted with eps_mkl r_hat_j r_hat_n, Eq. A33",,,pass,
+217,A33,eq:76,identity,eps_mkl eps_min = delta_ik delta_nl - delta_nk delta_il,0.00e+00,0e+00,pass,
+218,A34,ZEqnNum155733,derivation,product rule with Eqs. A1-A2,,,pass,
+219,A35,eq:78,derivation,Eq. A34 with Eq. A2,,,pass,
+220,A36,ZEqnNum976643,derivation,Eq. A35 with Eqs. A21-A23,,,pass,
+221,A37,eq:80,identity,R3_r - 2L3/r - L3_r + (R3 + R31 - 2L3)/r = 0 (irrotational test field p = 3),2.80e-10,1e-06,pass,
+222,A38,eq:81,identity,irrotational p = 3: three relations (same relation as Eq. 47),1.94e-09,1e-06,pass,see Eq. 47
+223,A39,eq:82,definition,Omega_(p) = r_hat^(p) (outer product),,,n/a,
+224,A40,ZEqnNum107942,identity,"(Omega_(p))_,m = (Pi_(p+1) - p Omega_(p+1))/r, p = 1-5 (finite differences)",4.63e-10,1e-07,pass,
+225,A41,ZEqnNum991520,definition,Pi_(p+1): sum of the p terms in which one r_hat_e is replaced by delta_em,,,pass,"checked implicitly through Eq. A40; the summation index set ""[S_p]^(p-1)"" denotes the p choices of (p-1) r_hat factors"
+226,A42,eq:85,identity,Eq. A40 for p = 4,3.64e-10,1e-07,pass,
+227,A43,eq:86,identity,Pi_(5) written out (four terms; same as Eq. A4),2.29e-17,1e-13,pass,
+228,A44,eq:87,definition,Lambda_(p-1) = delta_ij delta_kl ... ((p-1)/2 factors),,,n/a,
+229,A45,ZEqnNum230977,identity,"number of terms of Sigma_(p-1) = (p-1)!/(2^((p-1)/2) ((p-1)/2)!) (count of pairings), p - 1 = 2, 4, 6, 8",0.00e+00,0e+00,pass,2: 1; 4: 3; 6: 15; 8: 105
+230,A46,eq:89,identity,Lambda_(4) and Sigma_(4) (3 terms),0.00e+00,1e-14,pass,
+231,A47,ZEqnNum430198,identity,"(Omega_(p))_,m r_hat_m = 0, p = 1-5",2.90e-10,1e-07,pass,absolute
+232,A48,eq:91,identity,"(Omega_(p))_,l (contracted on its last index) = (2/r) Omega_(p-1), p = 2-5",8.68e-10,1e-07,pass,
+233,A49,eq:92,definition,p-th order correlation tensor (as Eq. 48),,,n/a,
+234,A50,ZEqnNum517859,identity,transverse projection vanishes for isotropic tensors (generalization of Eqs. A21-A23),,,pass,every contraction of an isotropic tensor with deltas and r_hat leaving one free index is proportional to r_hat
+235,A51,ZEqnNum781857,identity,same with the free index on an unprimed velocity,,,pass,
+236,A52,ZEqnNum442788,definition,"R_(p,q+1) (as Eq. 49)",,,n/a,
+237,A53,eq:96,definition,"L_(p,q) (as Eq. 50)",,,n/a,
+238,A54,ZEqnNum340773,definition,"T_(p,q) (as Eq. 51)",,,n/a,
+239,A55,ZEqnNum949171,statement,r -> 0: the divergence of an odd-order isotropic tensor tends to a multiple of Sigma_(p-1) (one-point isotropic tensor),,,pass,
+240,A56,eq:99,identity,"Sigma_(p-1) contracted with delta^(q/2) r_hat^(p-q-1) = p!/(2^((p-1)/2) ((p-1)/2)! (p-q)), p = 3, 5, 7",5.92e-16,1e-12,pass,"p=3,q=0: 1; p=5,q=0: 3; p=5,q=2: 5; p=7,q=0: 15; p=7,q=2: 21; p=7,q=4: 35"
+241,A57,ZEqnNum747023,identity,lim r->0 <u^q u_L^(p-q-1)>/<u_L^(p-1)> = p/(p-q) (same relation as Eq. 52),2.22e-16,1e-10,pass,see Eq. 52
+242,A58,ZEqnNum300527,identity,lim r->inf of the same ratio (same relation as Eq. 53),2.22e-16,1e-10,pass,see Eq. 53
+243,A59,eq:102,data,"odd p: L_(p,q)/L_(p,0) -> p/(p-q) (same relation as Eq. 54)",,,flagged,"see Eq. 54: L32/L30 (3): 3.33, 1.99; L52/L50 (5/3): 1.23, 1.71; L54/L50 (5): 3.71, 3.22. Odd correlations are noisy; the limits are not reached clearly (L_(5,0) is the outlier, see open issue)"
+244,A60,eq:103,data,"even p: R_(p,q+1)/L_(p,0) -> (p+1)/(p-q-1) as r -> 0 (same relation as Eq. 55)",7.69e-02,1e-01,pass,see Eq. 55: R41/L40 1.649 vs 1.667; R43/L40 4.789 vs 5.000; R61/L60 1.386 vs 1.400; R63/L60 2.274 vs 2.333; R65/L60 6.462 vs 7.000
+245,A61,ZEqnNum950434,data,"even p: L_(p,q)/L_(p,0) -> (p+1)/(p+1-q) as r -> 0 (same relation as Eq. 56)",3.38e-02,1e-01,pass,see Eq. 56: L42/L40 1.642 vs 1.667; L62/L60 1.386 vs 1.400; L64/L60 2.254 vs 2.333. The limit r->infinity in the label is not derived (0/0 for even p); data at 50-100 Mpc/h: L42/L40 = 1.66
+246,A62,ZEqnNum129631,definition,divergence-free in the primed index (incompressible),,,n/a,
+247,A63,ZEqnNum743715,derivation,product rule,,,pass,
+248,A64,ZEqnNum946495,derivation,Eq. A40 applied to r_hat^(p-q-1),,,pass,
+249,A65,ZEqnNum733395,identity,"(L_(p,q))_r + 2L_(p,q)/r = (p-q-1)(R_(p,q+1) - L_(p,q))/r (equivalent to Eq. A66) (same relation as Eq. 57)",2.88e-07,1e-05,pass,see Eq. 57
+250,A66,ZEqnNum234089,identity,"(p-q-1) R_(p,q+1) = (r^(p-q+1) L_(p,q))_r/r^(p-q) (same relation as Eq. 57)",2.88e-07,1e-05,pass,see Eq. 57
+251,A67,eq:110,identity,"2(p-q-1) T_(p,q) = (r^2 L_(p,q))_r/r (same relation as Eq. 58)",9.69e-07,1e-05,pass,see Eq. 58
+252,A68,ZEqnNum533624,identity,"(r^2 R_(p,q+1))_r = 2 (r^(p-q+1) T_(p,q))_r/r^(p-q-1) (same relation as Eq. 59)",1.35e-07,1e-05,pass,see Eq. 59
+253,A69,ZEqnNum703630,derivation,"divergence with constant theta: <u_i..u_m u_n'>_,n = theta <u_i..u_m>",,,pass,
+254,A70,eq:113,derivation,Eq. A69 with Eq. A40,,,pass,
+255,A71,ZEqnNum365670,identity,"(p-q-1) R_(p,q+1) + <u^q u_L^(p-q-1)> theta r = (r^(p-q+1) L_(p,q))_r/r^(p-q) (same relation as Eq. 60)",1.95e-07,1e-05,pass,see Eq. 60: identity for any isotropic tensor; it becomes the kinematic relation when div Q = theta <...> (spatially constant theta)
+256,A72,ZEqnNum136987,statement,odd one-point moments vanish as r -> 0 (same relation as Eq. 61),,,pass,"see Eq. 61: N-body: <u_L^3>/u^3 = 0.11 at 0.05 Mpc/h, 0.02 at 0.005; consistent with -> 0 linearly (mean infall ~ r)"
+257,A73,ZEqnNum383689,identity,q = p-1 case (same relation as Eq. 62),,,pass,see Eq. 62: special case of the tested identity
+258,A74,ZEqnNum213847,identity,q = 0 case (same relation as Eq. 63),,,pass,see Eq. 63: special case of the tested identity
+259,A75,ZEqnNum719510,identity,"L_(p,p-1) = (p/3) theta <u_L^(p-1)> r (same relation as Eq. 64)",,,pass,see Eq. 64
+260,A76,ZEqnNum643394,identity,p = 1: theta = (r^2 <Delta u_L>)_r/(2r^2) (same relation as Eq. 65),,,pass,"see Eq. 65: N-body (z=0, 0.06-0.3 Mpc/h): median <Delta u_L>/(-Har) = 1.12. Inconsistent with ""theta = -3Ha"" in Section 3.1.2 and Eq. 156 (the divergence of u_r = -Ha r): erratum E2 (theta = -3Ha/2 is the value that enters the kinematic relations of pair-averaged statistics)"
+261,A77,ZEqnNum591192,identity,Eq. A71 with Eqs. A57 and 257 (same relation as Eq. 66),,,pass,see Eq. 66: uses the limit ratio Eq. 52 at finite r (approximation)
+262,A78,ZEqnNum391500,derivation,"curl-free condition contracted with eps eps, Eq. A33",,,pass,
+263,A79,ZEqnNum243735,derivation,expansion of Eq. A78,,,pass,
+264,A80,eq:123,derivation,LHS by the product rule,,,pass,
+265,A81,ZEqnNum777708,derivation,"LHS with Eq. A47: (R_(p,q+1))_r",,,pass,
+266,A82,eq:125,derivation,RHS by the product rule,,,pass,
+267,A83,eq:126,derivation,RHS with Eq. A40,,,pass,
+268,A84,ZEqnNum311718,derivation,"contraction of Pi_(p-q) gives R_(p,q+1) + (p-q-2) L_(p,q+2)",,,pass,
+269,A85,ZEqnNum108255,identity,"RHS = (L_(p,q))_r + (2/r) L_(p,q) - (1/r)(R_(p,q+1) + (p-q-2) L_(p,q+2) - (p-q-1) L_(p,q))",,,fixed (E15),"published first term ""L_(p,q)"" lacks the derivative "",r"" (it follows from the first term of Eq. A84 with Eq. A14); with the derivative, Eq. A85 = Eq. A81 gives Eq. A86, verified on test fields (Eq. 67)"
+270,A86,ZEqnNum900611,identity,irrotational relation 1 (same relation as Eq. 67),7.45e-10,1e-05,pass,see Eq. 67
+271,A87,ZEqnNum602698,identity,irrotational relation 2 (same relation as Eq. 68),1.87e-10,1e-05,pass,see Eq. 68
+272,A88,ZEqnNum433592,identity,irrotational relation 3 (same relation as Eq. 69),3.86e-09,1e-05,pass,see Eq. 69

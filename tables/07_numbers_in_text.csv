@@ -1,0 +1,49 @@
+# Publisher,Zhijie Xu,zhijie.xu@pnnl.gov,zhijiexu@hotmail.com,,,,,
+# Updated,10/2026,,,,,,,
+#Name,Every number quoted in the text: quoted vs recomputed,,,,,,,
+#Ref. [1],https://doi.org/10.1063/5.0215026,Xu 2024 Phys. Fluids 36 075146 (P19); arXiv:2202.02991,,,,,,
+,,,,,,,,
+,,,,,,,,
+item,location,quoted,recomputed,tolerance,rel,status,method,note
+u(z = 10) [km/s],Table 2,86.47,86.4683,0.005,False,pass,rms 1-D peculiar velocity over all 16.8 M particles (data/velocity_amplitude),
+u(z = 5) [km/s],Table 2,118.5,118.497,0.005,False,pass,rms 1-D peculiar velocity over all 16.8 M particles (data/velocity_amplitude),
+u(z = 3) [km/s],Table 2,148.61,148.611,0.005,False,pass,rms 1-D peculiar velocity over all 16.8 M particles (data/velocity_amplitude),
+u(z = 2) [km/s],Table 2,177.15,177.146,0.005,False,pass,rms 1-D peculiar velocity over all 16.8 M particles (data/velocity_amplitude),
+u(z = 1.5) [km/s],Table 2,199.76,199.758,0.005,False,pass,rms 1-D peculiar velocity over all 16.8 M particles (data/velocity_amplitude),
+u(z = 1) [km/s],Table 2,231.29,231.289,0.005,False,pass,rms 1-D peculiar velocity over all 16.8 M particles (data/velocity_amplitude),
+u(z = 0.5) [km/s],Table 2,277.67,277.669,0.005,False,pass,rms 1-D peculiar velocity over all 16.8 M particles (data/velocity_amplitude),
+u(z = 0.3) [km/s],Table 2,303.37,303.374,0.005,False,pass,rms 1-D peculiar velocity over all 16.8 M particles (data/velocity_amplitude),
+u(z = 0.1) [km/s],Table 2,335.42,335.416,0.005,False,pass,rms 1-D peculiar velocity over all 16.8 M particles (data/velocity_amplitude),
+u(z = 0) [km/s],Table 2,354.61,354.607,0.005,False,pass,rms 1-D peculiar velocity over all 16.8 M particles (data/velocity_amplitude),
+particle mass [1e11 Msun/h],"Sec. 2, Table 1",2.27,2.27227,0.005,False,pass,"rho_crit Omega_m L^3/N with rho_crit = 2.775e11 h^2 Msun/Mpc^3, L = 239.5 Mpc/h, N = 256^3",
+softening length [kpc/h],Sec. 2,36,36.0,0.5,False,pass,simulation parameter (Jenkins et al. 1998),
+a0 (u/u0)^2 = C a: C,Sec. 3,0.45,0.458255,0.02,False,pass,"power-law fit of a0(u/u0)^2 vs a over 10 outputs (a0 fitted over 20-90 Mpc/h), as P20",exponent of a0 u^2 vs a: 0.962
+"r2 [Mpc/h] (""r2 = 21.3"", Sec. 3)","Sec. 3 (Fig. 2 caption, after Eq. 9)",21.3,23.1321,0.05,False,FLAG,P20 fit (Table 2 of P20),"text elsewhere (Sec. 6.1, Eq. 101) uses r2 = 23.13 Mpc/h; 21.3 is a typo (erratum E1; P20 erratum E5)"
+r2 [Mpc/h] (Sec. 6.1),Sec. 6.1,23.13,23.1321,0.005,False,pass,P20 fit,
+K4 = <u_L^4>/<u_L^2>^2 (r -> 0),Sec. 5,4.8,4.88527,0.05,True,pass,"mean over 0.01-0.1 Mpc/h, z = 0 (pair-averaged one-point moments)","4.8 is the maximum-entropy value quoted from Xu (2022, 2023); the published Fig. 6 model curve used K4 = 4.6 (revised figure: 4.8)"
+beta_nu,Sec. 6.1,4.9,4.83741,0.05,True,pass,"nu(a=1)/[(3u0^2/2)^2/eps_u], eps_u = -(3/2)u0^2/t0","""approximately"": 5 per cent"
+nu(z=0) [1e4 Mpc km/s],Sec. 6.1,-1.0,-1.21657,0.5,True,pass,"nu = -alpha_nu u0 r2, alpha_nu from a3, a0 (Eq. 101); converted to Mpc (h = 0.5)","""on the order of"": order of magnitude"
+alpha_nu(z=0),Fig. 13,0.7417,0.741558,0.0005,False,pass,"Eq. 101 with fitted a3, a0",
+eps_u [1e-7 m^2/s^3] (Eq. 181),Eq. 181,-4.6,-4.58454,0.05,False,pass,"-(3/2) u0^2/t0, t0 = 2/(3H0), h = 0.5",
+"|eps_u| [m^2/s^3] (abstract ""eps_u ~ 1e-7"")",Abstract,1e-07,4.58454e-07,5.0,True,pass,as above,order of magnitude only; the text value is -4.6e-7 (negative: inverse cascade). Revised abstract quotes the value
+"u0 [km/s] (""u0 ~ 354"")",Sec. 6.1,354,354.607,0.05,True,pass,as Table 2,
+"large scales: L_(3,2) ~ a^((p+2)/2), p = 3 -> 2.5 (exponent)","Abstract, Sec. 6.1, Conclusions",2.5,2.02809,0.25,False,FLAG,"power-law fit of a3 u^3 vs a, 10 outputs",a^2.19 over a >= 1/3; not supported
+"large scales: L_(5,4) ~ a^3.5 (exponent)",Sec. 6.1,3.5,3.7182,0.25,False,pass,"fit of a5 u^5 vs a, 4 outputs",
+large scales: even p ~ a^(p/2): p = 2 (exponent),Abstract,1.0,0.961933,0.25,False,pass,fit of a0 u^2 vs a,
+large scales: even p ~ a^(p/2): p = 4 (exponent),Abstract,2.0,2.09601,0.25,False,pass,fit of a4 u^4 vs a,
+nu ~ a^(1/2) (exponent),"Sec. 6.1, Conclusions",0.5,0.0661564,0.25,False,FLAG,fit of alpha_nu vs a (nu = -alpha_nu u0 r2),alpha_nu ~ a^0.25 for a >= 1/3; not supported
+alpha_r ~ a^(3/4) (exponent),Sec. 7,0.75,0.465795,0.25,False,FLAG,fit of alpha_r = 4a3/a0 vs a,
+"xi(r_t) (""overdensity ~ 1.5"")",Sec. 6.2,1.5,0.848708,0.1,True,FLAG,"DTFE <delta> at r_t = 1.27 Mpc/h (P20), z = 0",<delta>(r_t) = 0.85; pair-count xi(r_t) = 4.12; published curve <(1+d)(1+d')>-1 = 1.18: no curve of Fig. 14 gives 1.5 at r_t (revised text quotes the values)
+"<u^2>(r_t)/u^2 (""~ 7.5"")",Sec. 6.2,7.5,7.21874,0.05,True,pass,"pair-averaged <|u|^2> at r_t, z = 0",
+xi < 0 for r > 30 Mpc/h: first zero [Mpc/h],"Sec. 6.2, Conclusions",30,31.648,0.1,True,pass,first sign change of the pair-count xi beyond 10 Mpc/h,"zero crossings at 31.6, 31.6, 31.7, 31.7 Mpc/h"
+<delta> < 0 (voids) for r > 30 Mpc/h: first zero [Mpc/h],Sec. 6.2,30,26.1837,0.15,True,pass,first sign change of DTFE <delta>,"""around 30 Mpc/h"": 15 per cent"
+"gamma on large grids (Delta n = 64), published axis order","Sec. 9.1, Fig. 19",1.0,0.899868,0.25,False,pass,median |<LHS>|/|RHS| over the binned points,"published: ""gamma = 1 on large scales"""
+"gamma on small grids (Delta n = 1024), published axis order","Sec. 9.1, Fig. 19",0.5,0.635776,0.25,False,pass,as above,
+"gamma on large grids (Delta n = 64), consistent axes","Sec. 9.1, Fig. 19",1.0,0.247415,0.25,False,FLAG,median |<LHS>|/|RHS| over the binned points,"published: ""gamma = 1 on large scales"""
+"gamma on small grids (Delta n = 1024), consistent axes","Sec. 9.1, Fig. 19",0.5,0.613836,0.25,False,pass,as above,
+<Delta u_L> = -Har on small scales (ratio),"Abstract, Sec. 9.2",1.0,1.18076,0.2,False,pass,"median over 0.06-0.4 Mpc/h, z = 0",
+"small scales: L_(1,0) ~ a^-0.5 at r = 0.05 Mpc/h (exponent)","Abstract, Sec. 9.2, Fig. 22",-0.5,-0.474073,0.25,False,pass,"fit of |L_(1,0)| (km/s)^1 vs a for a >= 0.3","odd p: a^((3p-5)/4); even p: a^(3p/4). Points: 5.68, 3.8, 4.86, 2.79"
+"small scales: L_(2,0) ~ a^1.5 at r = 0.05 Mpc/h (exponent)","Abstract, Sec. 9.2, Fig. 22",1.5,1.31351,0.25,False,pass,"fit of |L_(2,0)| (km/s)^2 vs a for a >= 0.3","odd p: a^((3p-5)/4); even p: a^(3p/4). Points: 2.28e+04, 3.11e+04, 4.3e+04, 6.42e+04, 7.55e+04, 8.7e+04, 9.78e+04"
+"small scales: L_(3,2) ~ a^1 at r = 0.05 Mpc/h (exponent)","Abstract, Sec. 9.2, Fig. 22",1.0,-0.350097,0.25,False,FLAG,"fit of |L_(3,2)| (km/s)^3 vs a for a >= 0.3","odd p: a^((3p-5)/4); even p: a^(3p/4). Points: 1.08e+06, 6.41e+05, 1.7e+06, 2.7e+06, 3.52e+06, 4.4e+05, 3.96e+05"
+"small scales: L_(4,0) ~ a^3 at r = 0.05 Mpc/h (exponent)","Abstract, Sec. 9.2, Fig. 22",3.0,2.5288,0.25,False,FLAG,"fit of |L_(4,0)| (km/s)^4 vs a for a >= 0.3","odd p: a^((3p-5)/4); even p: a^(3p/4). Points: 6.3e+09, 1.18e+10, 1.99e+10, 4.29e+10, 6.09e+10, 8.02e+10, 1.1e+11"
+"small scales: L_(5,4) ~ a^2.5 at r = 0.05 Mpc/h (exponent)","Abstract, Sec. 9.2, Fig. 22",2.5,1.77964,0.25,False,FLAG,"fit of |L_(5,4)| (km/s)^5 vs a for a >= 0.3","odd p: a^((3p-5)/4); even p: a^(3p/4). Points: 6.72e+11, 1.32e+12, 8e+12, 2.87e+12"

@@ -1,0 +1,18 @@
+# Publisher,Zhijie Xu,zhijie.xu@pnnl.gov,zhijiexu@hotmail.com
+# Updated,10/2026,
+#Name,1D rms peculiar velocity u(z) over all particles of each snapshot (Table 2),
+#Ref. [1],https://doi.org/10.1063/5.0215026,Xu 2024 Phys. Fluids 36 075146 (P19); arXiv:2202.02991
+#Ref. [2],https://doi.org/10.5281/zenodo.6757654,Dark matter flow dataset Part II (correlation-based statistics)
+,,
+,,
+z,a,u (km/s)
+10,0.0909090909,86.4682913
+5,0.166666667,118.49691
+3,0.25,148.610779
+2,0.333333333,177.145528
+1.5,0.4,199.758087
+1,0.5,231.288678
+0.5,0.666666667,277.66929
+0.3,0.769230769,303.37437
+0.1,0.909090909,335.416336
+0,1,354.606762

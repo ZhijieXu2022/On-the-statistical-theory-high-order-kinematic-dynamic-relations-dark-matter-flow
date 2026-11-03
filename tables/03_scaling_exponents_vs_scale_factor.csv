@@ -1,0 +1,15 @@
+# Publisher,Zhijie Xu,zhijie.xu@pnnl.gov,zhijiexu@hotmail.com
+# Updated,10/2026
+#Name,Power-law exponents of the fitted amplitudes versus scale factor a (log-log least squares over the available outputs)
+"#Ref. [1] Eq. (106, 108), Fig. 13",https://doi.org/10.1063/5.0215026,Xu 2024 Phys. Fluids 36 075146 (P19); arXiv:2202.02991
+#Note,eps_u = -4.5845e-07 m^2/s^3 (t0 = 13.037 Gyr); beta_nu = 4.8374
+,
+,
+quantity,exponent
+a0u2,0.961932568
+a3u3,2.02808899
+a4u4,2.09601235
+a5u5,3.71820175
+alpha_nu,0.0661564261
+alpha_r,0.465794894
+u2,1.20072306

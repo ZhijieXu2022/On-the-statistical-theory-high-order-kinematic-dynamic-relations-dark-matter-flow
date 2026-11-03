@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+message: "If you use this data or manuscript, please cite the article and this archive."
+title: "Dark matter flow data and manuscript: On the statistical theory of self-gravitating collisionless dark matter flow: High order kinematic and dynamic relations (P19)"
+type: dataset
+authors:
+  - family-names: Xu
+    given-names: Zhijie
+    affiliation: "Pacific Northwest National Laboratory"
+    orcid: "https://orcid.org/0000-0003-0459-4531"
+version: "2.0"
+date-released: "2026-11-03"
+doi: "10.5281/zenodo.23910393"
+license: CC-BY-4.0
+keywords: [dark matter, N-body simulation, velocity correlation, kinematic relations, dynamic relations, cosmology, turbulence]
+preferred-citation:
+  type: article
+  authors:
+    - family-names: Xu
+      given-names: Zhijie
+  title: "On the statistical theory of self-gravitating collisionless dark matter flow: High order kinematic and dynamic relations"
+  journal: "Physics of Fluids"
+  volume: 36
+  issue: 7
+  start: "075146"
+  year: 2024
+  doi: "10.1063/5.0215026"
+references:
+  - type: article
+    authors: [{family-names: Xu, given-names: Zhijie}]
+    title: "The statistical theory of dark matter flow and high order kinematic and dynamic relations for velocity correlation functions (2022 preprint)"
+    doi: "10.5281/zenodo.6640684"
+    year: 2022
+  - type: article
+    authors: [{family-names: Xu, given-names: Zhijie}]
+    title: "On the statistical theory of self-gravitating collisionless dark matter flow"
+    journal: "Physics of Fluids"
+    volume: 35
+    start: "077105"
+    year: 2023
+    doi: "10.1063/5.0151129"
+  - type: dataset
+    authors: [{family-names: Xu, given-names: Zhijie}]
+    title: "Dark matter flow dataset Part II: correlation-based statistics"
+    doi: "10.5281/zenodo.6757654"
+    year: 2022
+  - type: dataset
+    authors: [{family-names: Xu, given-names: Zhijie}]
+    title: "Dark matter flow dataset Part I: halo-based statistics"
+    doi: "10.5281/zenodo.6541231"
+    year: 2022
+  - type: dataset
+    authors: [{family-names: Xu, given-names: Zhijie}]
+    title: "Dark matter flow dataset (all files)"
+    doi: "10.5281/zenodo.6586213"
+    year: 2022
