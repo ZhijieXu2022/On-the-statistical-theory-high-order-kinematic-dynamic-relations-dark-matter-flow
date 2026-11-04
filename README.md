@@ -19,8 +19,6 @@ Virgo SCDM N-body simulation, redshifts z = 10 to 0.
 - The mean pairwise velocity follows <Δu_L> = −H a r. The third moment follows <(Δu_L)^3> ∝ ε_u a r, with a constant energy-cascade rate ε_u ≈ −4.6×10⁻⁷ m²/s³.
 - The combined kinematic and dynamic relations give exponential velocity correlations on large scales and one-fourth power-law correlations on small scales; the p-th order correlations follow a^((3p−5)/4) for odd p and a^(3p/4) for even p.
 
-Corrections to the published article are marked in the manuscript (`\fix` and `\addnote`).
-
 ## Major findings
 
 Virgo SCDM N-body simulation, redshifts z = 10 to 0:
