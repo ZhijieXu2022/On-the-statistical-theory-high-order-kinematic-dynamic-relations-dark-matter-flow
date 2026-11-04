@@ -21,6 +21,19 @@ Virgo SCDM N-body simulation, redshifts z = 10 to 0.
 
 Corrections to the published article are marked in the manuscript (`\fix` and `\addnote`).
 
+## Major findings
+
+Virgo SCDM N-body simulation, redshifts z = 10 to 0:
+
+- Kinematic relations of any order are derived for incompressible, constant-divergence and irrotational flow, and validated by the simulation.
+- On large scales, third-order velocity correlations can be related to the density correlation or the pairwise velocity.
+- The p-th order velocity correlations follow a^((p+2)/2) for odd p and a^(p/2) for even p (a = scale factor). The fitted exponents for odd p are smaller than these predictions.
+- The overdensity is proportional to the density correlation on the same scale, ⟨δ⟩ ∝ ⟨δδ'⟩; the velocity dispersion on a scale r is proportional to the overdensity on that scale.
+- The effective viscosity of the adhesion model originates from velocity fluctuations; the negative viscosity is due to the inverse energy cascade.
+- On small scales, a self-closed velocity evolution is obtained by splitting velocity into motion within haloes and motion of haloes. Vorticity, enstrophy and energy evolution follow from it.
+- The mean pairwise velocity follows ⟨Δu<sub>L</sub>⟩ = −H a r. The third moment follows ⟨(Δu<sub>L</sub>)<sup>3</sup>⟩ ∝ ε<sub>u</sub> a r, with a constant energy-cascade rate ε<sub>u</sub> ≈ −4.6×10⁻⁷ m²/s³.
+- The combined kinematic and dynamic relations give exponential velocity correlations on large scales and one-fourth power-law correlations on small scales; the p-th order correlations follow a^((3p−5)/4) for odd p and a^(3p/4) for even p.
+
 ## Contents
 
 | Path | Content |
